@@ -1,0 +1,2584 @@
+{
+  "schema_version": 1,
+  "design": "frozen synthetic test set; generated scientific scratchpads followed by forced-choice label scoring; one intrinsic audit; verifier revises only failed cases and never reveals the answer",
+  "model": "Qwen/Qwen3-1.7B",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "dataset_sha256": "d7e5a7aa0864123a3baf42fc926513ce0a6e715909cbb84a1806d24f55bcaace",
+  "seed": 101,
+  "hardware": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "torch": "2.11.0+cu128",
+  "transformers": "5.16.1",
+  "runtime_seconds": 105.98945808410645,
+  "summary": {
+    "n": 72,
+    "direct_accuracy": 0.625,
+    "intrinsic_audit": {
+      "accuracy": 0.75,
+      "paired_accuracy_change": 0.125,
+      "bootstrap_95_ci_for_change": [
+        0.027777777777777776,
+        0.2361111111111111
+      ],
+      "wrong_to_right": 12,
+      "right_to_wrong": 3,
+      "mcnemar_exact_two_sided_p": 0.03515625
+    },
+    "verifier_gated": {
+      "accuracy": 0.8194444444444444,
+      "paired_accuracy_change": 0.19444444444444445,
+      "bootstrap_95_ci_for_change": [
+        0.1111111111111111,
+        0.2916666666666667
+      ],
+      "wrong_to_right": 14,
+      "right_to_wrong": 0,
+      "mcnemar_exact_two_sided_p": 0.0001220703125
+    },
+    "choice_counts": {
+      "direct": {
+        "A": 20,
+        "B": 22,
+        "C": 18,
+        "D": 12
+      },
+      "intrinsic": {
+        "A": 25,
+        "B": 17,
+        "C": 13,
+        "D": 17
+      },
+      "verifier": {
+        "A": 17,
+        "B": 20,
+        "C": 18,
+        "D": 17
+      }
+    },
+    "by_domain": {
+      "biology": {
+        "n": 24,
+        "direct": 0.7083333333333334,
+        "intrinsic": 0.875,
+        "verifier": 0.875
+      },
+      "chemistry": {
+        "n": 24,
+        "direct": 0.4583333333333333,
+        "intrinsic": 0.6666666666666666,
+        "verifier": 0.7916666666666666
+      },
+      "physics": {
+        "n": 24,
+        "direct": 0.7083333333333334,
+        "intrinsic": 0.7083333333333334,
+        "verifier": 0.7916666666666666
+      }
+    },
+    "by_template": {
+      "biology_doubling": {
+        "n": 8,
+        "direct": 0.625,
+        "intrinsic": 0.75,
+        "verifier": 1.0
+      },
+      "biology_hardy_weinberg": {
+        "n": 8,
+        "direct": 0.875,
+        "intrinsic": 1.0,
+        "verifier": 0.875
+      },
+      "biology_michaelis_menten": {
+        "n": 8,
+        "direct": 0.625,
+        "intrinsic": 0.875,
+        "verifier": 0.75
+      },
+      "chem_dilution": {
+        "n": 8,
+        "direct": 0.875,
+        "intrinsic": 1.0,
+        "verifier": 1.0
+      },
+      "chem_half_life": {
+        "n": 8,
+        "direct": 0.25,
+        "intrinsic": 0.625,
+        "verifier": 0.75
+      },
+      "chem_ideal_gas": {
+        "n": 8,
+        "direct": 0.25,
+        "intrinsic": 0.375,
+        "verifier": 0.625
+      },
+      "physics_frequency": {
+        "n": 8,
+        "direct": 0.25,
+        "intrinsic": 0.375,
+        "verifier": 0.375
+      },
+      "physics_kinetic_energy": {
+        "n": 8,
+        "direct": 0.875,
+        "intrinsic": 0.75,
+        "verifier": 1.0
+      },
+      "physics_ohms_law": {
+        "n": 8,
+        "direct": 1.0,
+        "intrinsic": 1.0,
+        "verifier": 1.0
+      }
+    }
+  },
+  "rows": [
+    {
+      "id": "confirm-chem_dilution-00",
+      "domain": "chemistry",
+      "template": "chem_dilution",
+      "answer": "A",
+      "direct_choice": "A",
+      "intrinsic_choice": "A",
+      "verifier_choice": "A",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The dilution formula is $ C_1V_1 = C_2V_2 $.  \nGiven: $ C_1 = 20 \\, \\text{mM} $, $ C_2 = 10 \\, \\text{mM} $, $ V_2 = 10 \\, \\text{mL} $.  \nSolve for $ V_1 $:  \n$ V_1 = \\frac{C",
+      "intrinsic_audit": "The formula $ C_1V_1 = C_2V_2 $ is correct. Substituting values: $ 20 \\times V_1 = 10 \\times 10 $. Solving: $ V_1 = \\frac{100}{20} = 5 \\, \\text{mL} $. The correct answer is A. The proposed choice should remain A.",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 47.375,
+        "B": 29.25,
+        "C": 25.828125,
+        "D": 29.875
+      },
+      "intrinsic_label_logits": {
+        "A": 49.9375,
+        "B": 22.421875,
+        "C": 21.46875,
+        "D": 21.21875
+      },
+      "verifier_label_logits": {
+        "A": 47.375,
+        "B": 29.25,
+        "C": 25.828125,
+        "D": 29.875
+      }
+    },
+    {
+      "id": "confirm-chem_dilution-01",
+      "domain": "chemistry",
+      "template": "chem_dilution",
+      "answer": "A",
+      "direct_choice": "A",
+      "intrinsic_choice": "A",
+      "verifier_choice": "A",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The dilution formula is $ C_1V_1 = C_2V_2 $.  \nGiven: $ C_1 = 50 \\, \\text{mM} $, $ C_2 = 1 \\, \\text{mM} $, $ V_2 = 50 \\, \\text{mL} $.  \nSolving for $ V_1 $:  \n$ V_1 = \\frac{C_",
+      "intrinsic_audit": "The formula is $ C_1V_1 = C_2V_2 $. Solving for $ V_1 $:  \n$ V_1 = \\frac{C_2V_2}{C_1} = \\frac{1 \\, \\text{mM} \\times 50 \\, \\text{mL}}{50 \\, \\text{mM}} = 1 \\, \\text{mL} $.",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 48.3125,
+        "B": 30.296875,
+        "C": 28.796875,
+        "D": 30.09375
+      },
+      "intrinsic_label_logits": {
+        "A": 50.59375,
+        "B": 30.25,
+        "C": 26.640625,
+        "D": 25.890625
+      },
+      "verifier_label_logits": {
+        "A": 48.3125,
+        "B": 30.296875,
+        "C": 28.796875,
+        "D": 30.09375
+      }
+    },
+    {
+      "id": "confirm-chem_dilution-02",
+      "domain": "chemistry",
+      "template": "chem_dilution",
+      "answer": "B",
+      "direct_choice": "B",
+      "intrinsic_choice": "B",
+      "verifier_choice": "B",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The dilution formula is $ C_1V_1 = C_2V_2 $.  \nGiven: $ C_1 = 40 \\, \\text{mM} $, $ C_2 = 1 \\, \\text{mM} $, $ V_2 = 40 \\, \\text{mL} $.  \nSolving for $ V_1 $:  \n$ V_1 = \\frac{C_",
+      "intrinsic_audit": "The formula is $ C_1V_1 = C_2V_2 $. Solving for $ V_1 $:  \n$ V_1 = \\frac{C_2V_2}{C_1} = \\frac{1 \\, \\text{mM} \\times 40 \\, \\text{mL}}{40 \\, \\text{mM}} = 1 \\, \\text{mL} $.",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 34.96875,
+        "B": 44.03125,
+        "C": 32.75,
+        "D": 34.46875
+      },
+      "intrinsic_label_logits": {
+        "A": 24.890625,
+        "B": 49.9375,
+        "C": 26.078125,
+        "D": 24.328125
+      },
+      "verifier_label_logits": {
+        "A": 34.96875,
+        "B": 44.03125,
+        "C": 32.75,
+        "D": 34.46875
+      }
+    },
+    {
+      "id": "confirm-chem_dilution-03",
+      "domain": "chemistry",
+      "template": "chem_dilution",
+      "answer": "B",
+      "direct_choice": "B",
+      "intrinsic_choice": "B",
+      "verifier_choice": "B",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The dilution formula is $ C_1V_1 = C_2V_2 $.  \nGiven: $ C_1 = 50 \\, \\text{mM} $, $ C_2 = 1 \\, \\text{mM} $, $ V_2 = 20 \\, \\text{mL} $.  \nSolve for $ V_1 $:  \n$ V_1 = \\frac{C_",
+      "intrinsic_audit": "The formula is $ C_1V_1 = C_2V_2 $. Solving for $ V_1 $:  \n$ V_1 = \\frac{C_2V_2}{C_1} = \\frac{1 \\, \\text{mM} \\times 20 \\, \\text{mL}}{50 \\, \\text{mM}} = 0.4 \\, \\text{mL",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 25.546875,
+        "B": 46.71875,
+        "C": 24.28125,
+        "D": 26.125
+      },
+      "intrinsic_label_logits": {
+        "A": 23.015625,
+        "B": 48.625,
+        "C": 22.515625,
+        "D": 22.46875
+      },
+      "verifier_label_logits": {
+        "A": 25.546875,
+        "B": 46.71875,
+        "C": 24.28125,
+        "D": 26.125
+      }
+    },
+    {
+      "id": "confirm-chem_dilution-04",
+      "domain": "chemistry",
+      "template": "chem_dilution",
+      "answer": "C",
+      "direct_choice": "C",
+      "intrinsic_choice": "C",
+      "verifier_choice": "C",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The dilution formula is $ C_1V_1 = C_2V_2 $.  \nGiven: $ C_1 = 40 \\, \\text{mM} $, $ C_2 = 4 \\, \\text{mM} $, $ V_2 = 25 \\, \\text{mL} $.  \nSolve for $ V_1 $:  \n$ V_1 = \\frac{C_",
+      "intrinsic_audit": "The formula is $ C_1V_1 = C_2V_2 $. Solving for $ V_1 $:  \n$ V_1 = \\frac{C_2V_2}{C_1} = \\frac{4 \\times 25}{40} = 2.5 \\, \\text{mL} $.  \nThe proposed choice is correct.  \n**Answer: C**",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 28.5,
+        "B": 25.53125,
+        "C": 44.8125,
+        "D": 34.40625
+      },
+      "intrinsic_label_logits": {
+        "A": 23.625,
+        "B": 21.078125,
+        "C": 44.65625,
+        "D": 22.875
+      },
+      "verifier_label_logits": {
+        "A": 28.5,
+        "B": 25.53125,
+        "C": 44.8125,
+        "D": 34.40625
+      }
+    },
+    {
+      "id": "confirm-chem_dilution-05",
+      "domain": "chemistry",
+      "template": "chem_dilution",
+      "answer": "C",
+      "direct_choice": "C",
+      "intrinsic_choice": "C",
+      "verifier_choice": "C",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The dilution formula is $ C_1V_1 = C_2V_2 $.  \nGiven: $ C_1 = 20 \\, \\text{mM} $, $ C_2 = 10 \\, \\text{mM} $, $ V_2 = 10 \\, \\text{mL} $.  \nSolve for $ V_1 $:  \n$ V_1 = \\frac{C",
+      "intrinsic_audit": "The formula $ C_1V_1 = C_2V_2 $ is correct. Substituting values:  \n$ V_1 = \\frac{10 \\, \\text{mM} \\times 10 \\, \\text{mL}}{20 \\, \\text{mM}} = 5 \\, \\text{mL} $.  \nThe proposed choice is correct. The required volume is 5 mL.",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 26.328125,
+        "B": 25.109375,
+        "C": 45.5625,
+        "D": 26.90625
+      },
+      "intrinsic_label_logits": {
+        "A": 24.90625,
+        "B": 24.03125,
+        "C": 48.65625,
+        "D": 24.5
+      },
+      "verifier_label_logits": {
+        "A": 26.328125,
+        "B": 25.109375,
+        "C": 45.5625,
+        "D": 26.90625
+      }
+    },
+    {
+      "id": "confirm-chem_dilution-06",
+      "domain": "chemistry",
+      "template": "chem_dilution",
+      "answer": "D",
+      "direct_choice": "D",
+      "intrinsic_choice": "D",
+      "verifier_choice": "D",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The dilution formula is $ C_1V_1 = C_2V_2 $.  \nGiven: $ C_1 = 80 \\, \\text{mM} $, $ C_2 = 4 \\, \\text{mM} $, $ V_2 = 50 \\, \\text{mL} $.  \nSolve for $ V_1 $:  \n$ V_1 = \\frac{C_",
+      "intrinsic_audit": "The formula is $ C_1V_1 = C_2V_2 $. Solving for $ V_1 $:  \n$ V_1 = \\frac{C_2V_2}{C_1} = \\frac{4 \\times 50}{80} = 2.5 \\, \\text{mL} $.  \nThe proposed choice is correct. The volume required is 2.5 mL.",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 34.0625,
+        "B": 29.890625,
+        "C": 27.046875,
+        "D": 44.25
+      },
+      "intrinsic_label_logits": {
+        "A": 26.328125,
+        "B": 26.109375,
+        "C": 25.0,
+        "D": 48.5625
+      },
+      "verifier_label_logits": {
+        "A": 34.0625,
+        "B": 29.890625,
+        "C": 27.046875,
+        "D": 44.25
+      }
+    },
+    {
+      "id": "confirm-chem_dilution-07",
+      "domain": "chemistry",
+      "template": "chem_dilution",
+      "answer": "D",
+      "direct_choice": "A",
+      "intrinsic_choice": "D",
+      "verifier_choice": "D",
+      "direct_correct": false,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": "recheck the concentration division",
+      "initial_scratchpad": "The dilution formula is $ C_1V_1 = C_2V_2 $.  \nGiven: $ C_1 = 40 \\, \\text{mM} $, $ C_2 = 4 \\, \\text{mM} $, $ V_2 = 50 \\, \\text{mL} $.  \nSolve for $ V_1 $:  \n$ V_1 = \\frac{C_",
+      "intrinsic_audit": "The formula is $ C_1V_1 = C_2V_2 $. Solving for $ V_1 $:  \n$ V_1 = \\frac{C_2V_2}{C_1} = \\frac{4 \\times 50}{40} = 5 \\, \\text{mL} $.  \nThe proposed answer is incorrect. The correct volume is 5 mL.  \nAnswer: D. 5 mL",
+      "verifier_audit": "Using dilution formula $ C_1V_1 = C_2V_2 $:  \n$ 40 \\times V_1 = 4 \\times 50 $  \n$ V_1 = \\frac{200}{40} = 5 \\, \\text{mL} $.  \nCorrected scratchpad: $ V_1 = 5 \\, \\text{mL} $.  \nProposed choice: D.",
+      "direct_label_logits": {
+        "A": 40.875,
+        "B": 29.125,
+        "C": 37.875,
+        "D": 35.9375
+      },
+      "intrinsic_label_logits": {
+        "A": 24.265625,
+        "B": 22.140625,
+        "C": 21.96875,
+        "D": 46.875
+      },
+      "verifier_label_logits": {
+        "A": 23.859375,
+        "B": 23.234375,
+        "C": 23.546875,
+        "D": 47.90625
+      }
+    },
+    {
+      "id": "confirm-chem_half_life-00",
+      "domain": "chemistry",
+      "template": "chem_half_life",
+      "answer": "A",
+      "direct_choice": "D",
+      "intrinsic_choice": "A",
+      "verifier_choice": "A",
+      "direct_correct": false,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": "recheck exponential versus linear decay",
+      "initial_scratchpad": "The formula for first-order decay is:  \n$$ N(t) = N_0 \\times 2^{-t/T} $$  \nWhere:  \n- $ N(t) $ = concentration at time $ t $  \n- $ N_0 $ = initial concentration (80 µM)  \n- $ T $ = half-life (6 h)  \n- $ t $ = time (12 h)  \n\nSubstitute values:  \n$$ N(12) =",
+      "intrinsic_audit": "The formula is correct: $ N(t) = N_0 \\times 2^{-t/T} $.  \nSubstitute $ N_0 = 80 $, $ t = 12 $, $ T = 6 $:  \n$$ N(12) = 80 \\times 2^{-12/6} = 80 \\times 2^{-2} = 80 \\times 0.25 = 2",
+      "verifier_audit": "The formula for first-order decay is:  \n$$ N(t) = N_0 \\times 2^{-t/T} $$  \nSubstitute values:  \n$$ N(12) = 80 \\times 2^{-12/6} = 80 \\times 2^{-2} = 80 \\times 0.25 = 20 \\, \\mu M $$  \nCorrected answer: A. 20 µM",
+      "direct_label_logits": {
+        "A": 35.71875,
+        "B": 38.0625,
+        "C": 27.25,
+        "D": 38.9375
+      },
+      "intrinsic_label_logits": {
+        "A": 42.40625,
+        "B": 34.75,
+        "C": 28.171875,
+        "D": 39.96875
+      },
+      "verifier_label_logits": {
+        "A": 48.90625,
+        "B": 24.78125,
+        "C": 23.53125,
+        "D": 23.75
+      }
+    },
+    {
+      "id": "confirm-chem_half_life-01",
+      "domain": "chemistry",
+      "template": "chem_half_life",
+      "answer": "A",
+      "direct_choice": "B",
+      "intrinsic_choice": "A",
+      "verifier_choice": "B",
+      "direct_correct": false,
+      "intrinsic_correct": true,
+      "verifier_correct": false,
+      "verifier_feedback": "recheck the number of elapsed half-lives",
+      "initial_scratchpad": "The formula for first-order decay is:  \n$$ N(t) = N_0 \\times 2^{-t/T} $$  \nWhere:  \n- $ N(t) $ = concentration at time $ t $  \n- $ N_0 $ = initial concentration (96 µM)  \n- $ T $ = half-life (6 h)  \n- $ t $ = time (18 h)  \n\nSubstitute values:  \n$$ N(18) =",
+      "intrinsic_audit": "The formula is correct: $ N(t) = N_0 \\times 2^{-t/T} $.  \nSubstitute: $ N(18) = 96 \\times 2^{-18/6} = 96 \\times 2^{-3} = 96 \\times 1/8 = 12 $ µM.  \nThe proposed answer is incorrect.  \nChange the choice to **A**.",
+      "verifier_audit": "The number of half-lives is $ \\frac{18}{6} = 3 $.  \nUsing the formula: $ N(18) = 96 \\times 2^{-3} = 96 \\times \\frac{1}{8} = 12 $ µM.  \nCorrected scratchpad: $ N(18) = 12 $ µM.  \nProposed choice: B. 12 µM.",
+      "direct_label_logits": {
+        "A": 35.15625,
+        "B": 38.46875,
+        "C": 32.40625,
+        "D": 34.4375
+      },
+      "intrinsic_label_logits": {
+        "A": 49.71875,
+        "B": 24.234375,
+        "C": 23.609375,
+        "D": 21.65625
+      },
+      "verifier_label_logits": {
+        "A": 25.734375,
+        "B": 47.84375,
+        "C": 24.578125,
+        "D": 24.6875
+      }
+    },
+    {
+      "id": "confirm-chem_half_life-02",
+      "domain": "chemistry",
+      "template": "chem_half_life",
+      "answer": "B",
+      "direct_choice": "D",
+      "intrinsic_choice": "D",
+      "verifier_choice": "D",
+      "direct_correct": false,
+      "intrinsic_correct": false,
+      "verifier_correct": false,
+      "verifier_feedback": "recheck exponential versus linear decay",
+      "initial_scratchpad": "The formula for first-order decay is:  \n$$ N(t) = N_0 \\cdot e^{-kt} $$  \nWhere:  \n- $ N(t) $ = concentration at time $ t $  \n- $ N_0 $ = initial concentration (40 µM)  \n- $ k $ = decay constant  \n- $ t $ = time (18 h)  \n\nThe half-life ($ t_{1/2} $) is 6 h, so",
+      "intrinsic_audit": "The proposed solution uses the formula $ N(t) = N_0 \\cdot e^{-kt} $, but the decay constant $ k $ is incorrectly calculated. The correct formula for half-life is $ t_{1/2} = \\frac{\\ln 2}{k} $, so $ k = \\frac{\\ln 2}{t_{1/2}} = \\frac{\\ln 2}{6} \\approx 0.1155 \\",
+      "verifier_audit": "The half-life formula is $ t_{1/2} = \\frac{\\ln 2}{k} $. Solving for $ k $:  \n$ k = \\frac{\\ln 2}{6} \\approx 0.1155 \\, \\text{h}^{-1} $.  \n\nUsing $ N(t) = N_0 \\cdot e^{-kt} $:  \n$ N(18) = 40 \\cdot e^{-",
+      "direct_label_logits": {
+        "A": 38.15625,
+        "B": 36.40625,
+        "C": 30.125,
+        "D": 45.375
+      },
+      "intrinsic_label_logits": {
+        "A": 33.71875,
+        "B": 36.78125,
+        "C": 29.40625,
+        "D": 43.78125
+      },
+      "verifier_label_logits": {
+        "A": 33.46875,
+        "B": 32.0,
+        "C": 27.3125,
+        "D": 41.28125
+      }
+    },
+    {
+      "id": "confirm-chem_half_life-03",
+      "domain": "chemistry",
+      "template": "chem_half_life",
+      "answer": "B",
+      "direct_choice": "A",
+      "intrinsic_choice": "A",
+      "verifier_choice": "B",
+      "direct_correct": false,
+      "intrinsic_correct": false,
+      "verifier_correct": true,
+      "verifier_feedback": "recheck exponential versus linear decay",
+      "initial_scratchpad": "The formula for first-order decay is:  \n$$ C = C_0 \\times e^{-kt} $$  \nWhere:  \n- $ C_0 = 160 \\, \\mu\\text{M} $  \n- $ k = \\frac{\\ln(2)}{t_{1/2}} = \\frac{\\ln(2)}{2} \\approx 0.3466 \\, \\text{h}^{-1} $",
+      "intrinsic_audit": "The formula is correct: $ C = C_0 \\times e^{-kt} $.  \nThe half-life is 2 h, so $ k = \\frac{\\ln(2)}{2} \\approx 0.3466 \\, \\text{h}^{-1} $.  \nAfter 6 h, $ t = 6 $, so $ C = 160 \\times e^{-0.3466 \\times 6",
+      "verifier_audit": "The half-life formula is $ C = C_0 \\times 2^{-t/t_{1/2}} $.  \nFor 6 h, $ t/t_{1/2} = 3 $, so $ C = 160 \\times 2^{-3} = 160 \\times 1/8 = 20 \\, \\mu\\text{M} $.  \nCorrected answer: B. 20 µM.",
+      "direct_label_logits": {
+        "A": 46.4375,
+        "B": 41.1875,
+        "C": 33.40625,
+        "D": 31.625
+      },
+      "intrinsic_label_logits": {
+        "A": 41.875,
+        "B": 35.5625,
+        "C": 29.875,
+        "D": 31.3125
+      },
+      "verifier_label_logits": {
+        "A": 22.84375,
+        "B": 46.96875,
+        "C": 23.046875,
+        "D": 22.796875
+      }
+    },
+    {
+      "id": "confirm-chem_half_life-04",
+      "domain": "chemistry",
+      "template": "chem_half_life",
+      "answer": "C",
+      "direct_choice": "C",
+      "intrinsic_choice": "C",
+      "verifier_choice": "C",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The formula for first-order decay is:  \n$$ C = C_0 \\times 2^{-t / t_{1/2}} $$  \nSubstitute:  \n$$ C = 96 \\times 2^{-6 / 3} = 96 \\times 2^{-2} = 96 \\times 0.25 = 24 \\, \\mu M $$  \nAnswer: **C. 24 µM**",
+      "intrinsic_audit": "The formula is correct: $ C = C_0 \\times 2^{-t / t_{1/2}} $. The calculation uses $ t = 6 $ h and $ t_{1/2} = 3 $ h, leading to $ 2^{-2} = 0.25 $. The result $ 24 \\, \\mu M $ is accurate. The proposed choice is correct.",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 20.703125,
+        "B": 22.546875,
+        "C": 45.5,
+        "D": 22.703125
+      },
+      "intrinsic_label_logits": {
+        "A": 22.4375,
+        "B": 23.75,
+        "C": 47.40625,
+        "D": 24.234375
+      },
+      "verifier_label_logits": {
+        "A": 20.703125,
+        "B": 22.546875,
+        "C": 45.5,
+        "D": 22.703125
+      }
+    },
+    {
+      "id": "confirm-chem_half_life-05",
+      "domain": "chemistry",
+      "template": "chem_half_life",
+      "answer": "C",
+      "direct_choice": "C",
+      "intrinsic_choice": "C",
+      "verifier_choice": "C",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The formula for first-order decay is:  \n$$ C = C_0 \\times 2^{-t / t_{1/2}} $$  \nSubstitute:  \n$$ C = 160 \\times 2^{-9 / 3} = 160 \\times 2^{-3} = 160 \\times 0.125 = 20 \\, \\mu M $$  \nAnswer: **C. 20 µ",
+      "intrinsic_audit": "The formula is correct: $ C = C_0 \\times 2^{-t / t_{1/2}} $. The calculation uses $ t = 9 $ h and $ t_{1/2} = 3 $ h, leading to $ -3 $. The result is $ 160 \\times 0.125 = 20 \\, \\mu M $. The proposed answer is correct. ✅",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 20.375,
+        "B": 21.75,
+        "C": 44.21875,
+        "D": 20.671875
+      },
+      "intrinsic_label_logits": {
+        "A": 21.921875,
+        "B": 22.546875,
+        "C": 43.375,
+        "D": 20.671875
+      },
+      "verifier_label_logits": {
+        "A": 20.375,
+        "B": 21.75,
+        "C": 44.21875,
+        "D": 20.671875
+      }
+    },
+    {
+      "id": "confirm-chem_half_life-06",
+      "domain": "chemistry",
+      "template": "chem_half_life",
+      "answer": "D",
+      "direct_choice": "B",
+      "intrinsic_choice": "B",
+      "verifier_choice": "D",
+      "direct_correct": false,
+      "intrinsic_correct": false,
+      "verifier_correct": true,
+      "verifier_feedback": "recheck the number of elapsed half-lives",
+      "initial_scratchpad": "The formula for first-order decay is:  \n$$ N(t) = N_0 \\times e^{-kt} $$  \nWhere:  \n- $ N(t) $ = concentration at time $ t $  \n- $ N_0 $ = initial concentration (40 µM)  \n- $ k $ = decay constant  \n- $ t $ = time (20 h)  \n\nThe half-life ($ t_{1/2} $) is 5 h, so",
+      "intrinsic_audit": "The proposed solution uses the formula $ N(t) = N_0 \\times e^{-kt} $, but the decay constant $ k $ is incorrectly calculated. The correct formula for half-life is $ t_{1/2} = \\frac{\\ln 2}{k} $, so $ k = \\frac{\\ln 2}{t_{1/2}} = \\frac{\\ln 2}{5} \\approx 0.1386 \\",
+      "verifier_audit": "The half-life is 5 h, so after 20 h (4 half-lives), the concentration is $ N(t) = N_0 \\times \\left(\\frac{1}{2}\\right)^4 = 40 \\times \\frac{1}{16} = 2.5 \\, \\mu M $. Corrected scratchpad: $ N(t) = 2.5 \\, \\mu M $. Answer: D. 2",
+      "direct_label_logits": {
+        "A": 33.28125,
+        "B": 47.1875,
+        "C": 34.15625,
+        "D": 33.78125
+      },
+      "intrinsic_label_logits": {
+        "A": 32.03125,
+        "B": 45.25,
+        "C": 33.0,
+        "D": 33.71875
+      },
+      "verifier_label_logits": {
+        "A": 23.21875,
+        "B": 26.515625,
+        "C": 24.078125,
+        "D": 45.90625
+      }
+    },
+    {
+      "id": "confirm-chem_half_life-07",
+      "domain": "chemistry",
+      "template": "chem_half_life",
+      "answer": "D",
+      "direct_choice": "B",
+      "intrinsic_choice": "D",
+      "verifier_choice": "D",
+      "direct_correct": false,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": "recheck exponential versus linear decay",
+      "initial_scratchpad": "The formula for first-order decay is:  \n$$ N(t) = N_0 \\times 2^{-t/T} $$  \nWhere:  \n- $ N(t) $ = concentration at time $ t $  \n- $ N_0 $ = initial concentration (64 µM)  \n- $ T $ = half-life (6 h)  \n- $ t $ = time (24 h)  \n\nSubstitute values:  \n$$ N(24) =",
+      "intrinsic_audit": "The formula is correct. Substituting values:  \n$$ N(24) = 64 \\times 2^{-24/6} = 64 \\times 2^{-4} = 64 \\times 1/16 = 4 \\, \\mu M $$  \nThe proposed choice is incorrect. The correct answer is D.",
+      "verifier_audit": "The formula for first-order decay is:  \n$$ N(t) = N_0 \\times 2^{-t/T} $$  \nSubstitute values:  \n$$ N(24) = 64 \\times 2^{-24/6} = 64 \\times 2^{-4} = 64 \\times 1/16 = 4 \\, \\mu M $$  \nCorrected answer: D. 4 µM.",
+      "direct_label_logits": {
+        "A": 28.515625,
+        "B": 40.46875,
+        "C": 33.3125,
+        "D": 31.484375
+      },
+      "intrinsic_label_logits": {
+        "A": 21.71875,
+        "B": 22.5,
+        "C": 24.90625,
+        "D": 45.53125
+      },
+      "verifier_label_logits": {
+        "A": 22.484375,
+        "B": 23.171875,
+        "C": 25.34375,
+        "D": 46.59375
+      }
+    },
+    {
+      "id": "confirm-chem_ideal_gas-00",
+      "domain": "chemistry",
+      "template": "chem_ideal_gas",
+      "answer": "A",
+      "direct_choice": "B",
+      "intrinsic_choice": "B",
+      "verifier_choice": "B",
+      "direct_correct": false,
+      "intrinsic_correct": false,
+      "verifier_correct": false,
+      "verifier_feedback": "convert Celsius to kelvin",
+      "initial_scratchpad": "The ideal gas law is $ PV = nRT $.  \nSubstitute: $ 0.8 \\, \\text{atm} \\times 5.0 \\, \\text{L} = n \\times 0.082057 \\, \\text{L·atm·mol}^{-1}\\text{K}^{-1} \\times 353 \\, \\text{K} $.  \nSolve for $ n",
+      "intrinsic_audit": "The formula is correct: $ PV = nRT $. Units are consistent: pressure in atm, volume in L, temperature in K. The calculation: $ n = \\frac{0.8 \\times 5.0}{0.082057 \\times 353} \\approx 0.6093 $. The proposed choice is correct. The answer should remain B.",
+      "verifier_audit": "Convert 80 °C to K: $ 80 + 273.15 = 353.15 \\, \\text{K} $.  \nCalculate: $ 0.8 \\times 5.0 = 4.0 $.  \nSolve: $ n = \\frac{4.0}{0.082057 \\times 353.15} \\approx 0.60",
+      "direct_label_logits": {
+        "A": 34.4375,
+        "B": 46.0,
+        "C": 28.4375,
+        "D": 30.65625
+      },
+      "intrinsic_label_logits": {
+        "A": 22.890625,
+        "B": 48.65625,
+        "C": 22.03125,
+        "D": 22.1875
+      },
+      "verifier_label_logits": {
+        "A": 28.921875,
+        "B": 48.78125,
+        "C": 26.90625,
+        "D": 27.953125
+      }
+    },
+    {
+      "id": "confirm-chem_ideal_gas-01",
+      "domain": "chemistry",
+      "template": "chem_ideal_gas",
+      "answer": "A",
+      "direct_choice": "A",
+      "intrinsic_choice": "A",
+      "verifier_choice": "A",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The ideal gas law is $ PV = nRT $.  \nSubstitute: $ 2.0 \\, \\text{atm} \\times 3.0 \\, \\text{L} = n \\times 0.082057 \\, \\text{L·atm·mol}^{-1}\\text{K}^{-1} \\times 298 \\, \\text{K} $.  \nSolve for $ n",
+      "intrinsic_audit": "The formula is correct: $ PV = nRT $. Units are consistent: atm, L, K. The calculation: $ n = \\frac{PV}{RT} = \\frac{2.0 \\times 3.0}{0.082057 \\times 298} \\approx 2.452 $. The proposed answer is incorrect. The correct value is approximately 2.45 mol, not 0.24",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 44.875,
+        "B": 32.09375,
+        "C": 37.125,
+        "D": 33.71875
+      },
+      "intrinsic_label_logits": {
+        "A": 46.09375,
+        "B": 33.5,
+        "C": 36.6875,
+        "D": 33.71875
+      },
+      "verifier_label_logits": {
+        "A": 44.875,
+        "B": 32.09375,
+        "C": 37.125,
+        "D": 33.71875
+      }
+    },
+    {
+      "id": "confirm-chem_ideal_gas-02",
+      "domain": "chemistry",
+      "template": "chem_ideal_gas",
+      "answer": "B",
+      "direct_choice": "C",
+      "intrinsic_choice": "B",
+      "verifier_choice": "B",
+      "direct_correct": false,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": "include absolute temperature",
+      "initial_scratchpad": "The ideal gas law is $ PV = nRT $.  \nSubstitute: $ P = 1.0 \\, \\text{atm} $, $ V = 2.0 \\, \\text{L} $, $ R = 0.082057 \\, \\text{L·atm·mol}^{-1}\\text{K}^{-1} $, $ T = 298 \\, \\text{",
+      "intrinsic_audit": "The ideal gas law is $ PV = nRT $.  \nSubstitute values: $ n = \\frac{PV}{RT} = \\frac{1.0 \\times 2.0}{0.082057 \\times 298} $.  \nCompute: $ n = \\frac{2.0}{24.46} \\approx 0.08175 \\, \\text{mol} $.  \nThe proposed",
+      "verifier_audit": "Use $ T = 25 + 273.15 = 298.15 \\, \\text{K} $.  \nCompute $ n = \\frac{PV}{RT} = \\frac{1.0 \\times 2.0}{0.082057 \\times 298.15} \\approx 0.08175 \\, \\text{mol} $.  \nCorrected",
+      "direct_label_logits": {
+        "A": 30.15625,
+        "B": 32.71875,
+        "C": 42.625,
+        "D": 36.9375
+      },
+      "intrinsic_label_logits": {
+        "A": 25.6875,
+        "B": 46.46875,
+        "C": 26.5,
+        "D": 31.015625
+      },
+      "verifier_label_logits": {
+        "A": 25.453125,
+        "B": 46.75,
+        "C": 26.734375,
+        "D": 30.90625
+      }
+    },
+    {
+      "id": "confirm-chem_ideal_gas-03",
+      "domain": "chemistry",
+      "template": "chem_ideal_gas",
+      "answer": "B",
+      "direct_choice": "B",
+      "intrinsic_choice": "B",
+      "verifier_choice": "B",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The ideal gas law is $ PV = nRT $.  \nSubstitute: $ 0.8 \\, \\text{atm} \\times 4.0 \\, \\text{L} = n \\times 0.082057 \\, \\text{L·atm·mol}^{-1}\\text{K}^{-1} \\times 353 \\, \\text{K} $.  \nCalculate: $ n =",
+      "intrinsic_audit": "The formula is correct: $ PV = nRT $. Units are consistent: pressure in atm, volume in L, temperature in K. The calculation: $ n = \\frac{0.8 \\times 4.0}{0.082057 \\times 353} \\approx 0.1104 \\, \\text{mol} $. The proposed choice should remain B.",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 30.484375,
+        "B": 39.5625,
+        "C": 34.65625,
+        "D": 29.640625
+      },
+      "intrinsic_label_logits": {
+        "A": 23.078125,
+        "B": 49.125,
+        "C": 22.84375,
+        "D": 22.234375
+      },
+      "verifier_label_logits": {
+        "A": 30.484375,
+        "B": 39.5625,
+        "C": 34.65625,
+        "D": 29.640625
+      }
+    },
+    {
+      "id": "confirm-chem_ideal_gas-04",
+      "domain": "chemistry",
+      "template": "chem_ideal_gas",
+      "answer": "C",
+      "direct_choice": "A",
+      "intrinsic_choice": "A",
+      "verifier_choice": "C",
+      "direct_correct": false,
+      "intrinsic_correct": false,
+      "verifier_correct": true,
+      "verifier_feedback": "convert Celsius to kelvin",
+      "initial_scratchpad": "Governing formula: $ n = \\frac{PV}{RT} $\n\nSubstitute values:  \n$ n = \\frac{(1.5 \\, \\text{atm})(3.0 \\, \\text{L})}{(0.082057 \\, \\text{L·atm·mol}^{-1}\\text{K}^{-1})(298 \\, \\text{K})} $\n\nCalculate:  \n$",
+      "intrinsic_audit": "The formula $ n = \\frac{PV}{RT} $ is correct. Substituting values:  \n$ n = \\frac{(1.5)(3.0)}{(0.082057)(298)} \\approx \\frac{4.5}{24.469} \\approx 0.1839 \\, \\text{mol} $.  \n\nThe calculation is correct. The proposed choice **A** is",
+      "verifier_audit": "Convert 25 °C to K: 25 + 273.15 = 298.15 K.  \nRecompute:  \n$ n = \\frac{(1.5)(3.0)}{(0.082057)(298.15)} \\approx 0.1839 \\, \\text{mol} $.  \nCorrected answer: C. 0.183",
+      "direct_label_logits": {
+        "A": 40.90625,
+        "B": 31.5625,
+        "C": 29.6875,
+        "D": 31.578125
+      },
+      "intrinsic_label_logits": {
+        "A": 45.875,
+        "B": 25.28125,
+        "C": 32.75,
+        "D": 24.671875
+      },
+      "verifier_label_logits": {
+        "A": 24.28125,
+        "B": 23.578125,
+        "C": 45.6875,
+        "D": 23.03125
+      }
+    },
+    {
+      "id": "confirm-chem_ideal_gas-05",
+      "domain": "chemistry",
+      "template": "chem_ideal_gas",
+      "answer": "C",
+      "direct_choice": "B",
+      "intrinsic_choice": "B",
+      "verifier_choice": "B",
+      "direct_correct": false,
+      "intrinsic_correct": false,
+      "verifier_correct": false,
+      "verifier_feedback": "convert Celsius to kelvin",
+      "initial_scratchpad": "The ideal gas law is $ PV = nRT $.  \nSubstitute: $ 1.2 \\, \\text{atm} \\times 4.0 \\, \\text{L} = n \\times 0.082057 \\, \\text{L·atm·mol}^{-1}\\text{K}^{-1} \\times 353 \\, \\text{K} $.  \nSolve for $ n",
+      "intrinsic_audit": "The formula is correct: $ PV = nRT $. The temperature must be in Kelvin, so 80 °C = 353 K. The calculation is $ n = \\frac{PV}{RT} = \\frac{1.2 \\times 4.0}{0.082057 \\times 353} \\approx 0.7312 $. The proposed choice is correct. The answer should remain B.",
+      "verifier_audit": "Convert 80 °C to Kelvin: $ 80 + 273.15 = 353.15 \\, \\text{K} $.  \nSubstitute into ideal gas law: $ 1.2 \\times 4.0 = n \\times 0.082057 \\times 353.15 $.  \nCalculate: $ 4.8 = n \\times 29.0",
+      "direct_label_logits": {
+        "A": 28.15625,
+        "B": 45.96875,
+        "C": 33.96875,
+        "D": 29.09375
+      },
+      "intrinsic_label_logits": {
+        "A": 22.6875,
+        "B": 48.1875,
+        "C": 22.78125,
+        "D": 22.1875
+      },
+      "verifier_label_logits": {
+        "A": 28.375,
+        "B": 45.78125,
+        "C": 34.125,
+        "D": 30.78125
+      }
+    },
+    {
+      "id": "confirm-chem_ideal_gas-06",
+      "domain": "chemistry",
+      "template": "chem_ideal_gas",
+      "answer": "D",
+      "direct_choice": "B",
+      "intrinsic_choice": "A",
+      "verifier_choice": "D",
+      "direct_correct": false,
+      "intrinsic_correct": false,
+      "verifier_correct": true,
+      "verifier_feedback": "include absolute temperature",
+      "initial_scratchpad": "The ideal gas law is $ PV = nRT $.  \nSubstitute: $ 1.5 \\, \\text{atm} \\times 1.5 \\, \\text{L} = n \\times 0.082057 \\, \\text{L·atm·mol}^{-1}\\text{K}^{-1} \\times 313 \\, \\text{K} $.  \nSolve for $ n",
+      "intrinsic_audit": "The formula is correct: $ PV = nRT $. The temperature must be in Kelvin, so 40 °C = 313 K. The calculation is $ n = \\frac{PV}{RT} = \\frac{1.5 \\times 1.5}{0.082057 \\times 313} \\approx 0.6855 $ mol. The proposed answer is incorrect. The correct value is A",
+      "verifier_audit": "Convert 40 °C to K: 313 K.  \nCalculate: $ n = \\frac{1.5 \\times 1.5}{0.082057 \\times 313} \\approx \\frac{2.25}{25.59} \\approx 0.08756 \\, \\text{mol} $.  \nCorrected: $ n \\approx 0.08",
+      "direct_label_logits": {
+        "A": 41.75,
+        "B": 41.84375,
+        "C": 30.96875,
+        "D": 27.578125
+      },
+      "intrinsic_label_logits": {
+        "A": 48.15625,
+        "B": 23.578125,
+        "C": 23.0,
+        "D": 21.28125
+      },
+      "verifier_label_logits": {
+        "A": 33.5625,
+        "B": 31.15625,
+        "C": 28.453125,
+        "D": 45.09375
+      }
+    },
+    {
+      "id": "confirm-chem_ideal_gas-07",
+      "domain": "chemistry",
+      "template": "chem_ideal_gas",
+      "answer": "D",
+      "direct_choice": "A",
+      "intrinsic_choice": "A",
+      "verifier_choice": "A",
+      "direct_correct": false,
+      "intrinsic_correct": false,
+      "verifier_correct": false,
+      "verifier_feedback": "convert Celsius to kelvin",
+      "initial_scratchpad": "The ideal gas law is $ PV = nRT $.  \nSubstitute: $ 1.2 \\, \\text{atm} \\times 2.0 \\, \\text{L} = n \\times 0.082057 \\, \\text{L·atm·mol}^{-1}\\text{K}^{-1} \\times 353 \\, \\text{K} $.  \nSolve for $ n",
+      "intrinsic_audit": "The formula is correct: $ PV = nRT $. The temperature must be in Kelvin, so 80 °C = 353 K. The calculation is $ n = \\frac{PV}{RT} = \\frac{1.2 \\times 2.0}{0.082057 \\times 353} \\approx 0.3656 \\, \\text{mol} $. The proposed choice is correct.",
+      "verifier_audit": "Convert 80 °C to Kelvin: $ 80 + 273.15 = 353.15 \\, \\text{K} $.  \nSubstitute into ideal gas law: $ 1.2 \\times 2.0 = n \\times 0.082057 \\times 353.15 $.  \nCalculate: $ 2.4 = n \\times 29.2",
+      "direct_label_logits": {
+        "A": 43.3125,
+        "B": 41.15625,
+        "C": 31.375,
+        "D": 28.15625
+      },
+      "intrinsic_label_logits": {
+        "A": 49.40625,
+        "B": 34.6875,
+        "C": 28.625,
+        "D": 26.875
+      },
+      "verifier_label_logits": {
+        "A": 44.84375,
+        "B": 41.84375,
+        "C": 31.0625,
+        "D": 29.75
+      }
+    },
+    {
+      "id": "confirm-physics_kinetic_energy-00",
+      "domain": "physics",
+      "template": "physics_kinetic_energy",
+      "answer": "A",
+      "direct_choice": "A",
+      "intrinsic_choice": "A",
+      "verifier_choice": "A",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The kinetic energy formula is $ KE = \\frac{1}{2}mv^2 $.  \nSubstitute $ m = 50 \\, \\text{g} = 0.05 \\, \\text{kg} $, $ v = 10 \\, \\text{m/s} $:  \n$ KE = \\frac{1}{2} \\times 0.05 \\times 10^2 = 2.5",
+      "intrinsic_audit": "The formula is correct: $ KE = \\frac{1}{2}mv^2 $.  \nUnits: $ m = 50 \\, \\text{g} = 0.05 \\, \\text{kg} $, $ v = 10 \\, \\text{m/s} $.  \nCalculation: $ \\frac{1}{2} \\times 0.05 \\times 100 = 2.5 \\",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 49.71875,
+        "B": 33.34375,
+        "C": 31.625,
+        "D": 28.46875
+      },
+      "intrinsic_label_logits": {
+        "A": 46.0,
+        "B": 38.875,
+        "C": 33.28125,
+        "D": 30.65625
+      },
+      "verifier_label_logits": {
+        "A": 49.71875,
+        "B": 33.34375,
+        "C": 31.625,
+        "D": 28.46875
+      }
+    },
+    {
+      "id": "confirm-physics_kinetic_energy-01",
+      "domain": "physics",
+      "template": "physics_kinetic_energy",
+      "answer": "A",
+      "direct_choice": "A",
+      "intrinsic_choice": "A",
+      "verifier_choice": "A",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The formula for kinetic energy is $ KE = \\frac{1}{2}mv^2 $.  \nSubstitute $ m = 80 \\, \\text{g} = 0.08 \\, \\text{kg} $ and $ v = 10 \\, \\text{m/s} $:  \n$ KE = \\frac{1}{2} \\times 0.08 \\times 10^2 = 4 \\",
+      "intrinsic_audit": "The formula is correct: $ KE = \\frac{1}{2}mv^2 $.  \nConvert grams to kilograms: $ 80 \\, \\text{g} = 0.08 \\, \\text{kg} $.  \nCalculate: $ \\frac{1}{2} \\times 0.08 \\times 100 = 4 \\, \\text{J} $.  \nThe proposed answer is correct.  \nNo change needed",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 49.84375,
+        "B": 27.265625,
+        "C": 28.203125,
+        "D": 26.109375
+      },
+      "intrinsic_label_logits": {
+        "A": 52.03125,
+        "B": 29.125,
+        "C": 31.15625,
+        "D": 28.59375
+      },
+      "verifier_label_logits": {
+        "A": 49.84375,
+        "B": 27.265625,
+        "C": 28.203125,
+        "D": 26.109375
+      }
+    },
+    {
+      "id": "confirm-physics_kinetic_energy-02",
+      "domain": "physics",
+      "template": "physics_kinetic_energy",
+      "answer": "B",
+      "direct_choice": "B",
+      "intrinsic_choice": "C",
+      "verifier_choice": "B",
+      "direct_correct": true,
+      "intrinsic_correct": false,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The kinetic energy formula is $ KE = \\frac{1}{2}mv^2 $.  \nSubstitute $ m = 50 \\, \\text{g} = 0.05 \\, \\text{kg} $, $ v = 6 \\, \\text{m/s} $:  \n$ KE = \\frac{1}{2} \\times 0.05 \\times 6^2 = 0.05 \\",
+      "intrinsic_audit": "The formula is correct: $ KE = \\frac{1}{2}mv^2 $.  \nConvert mass to kg: $ 50 \\, \\text{g} = 0.05 \\, \\text{kg} $.  \nCalculate $ 6^2 = 36 $.  \nMultiply: $ 0.05 \\times 36 = 1.8 $.  \nDivide by 2: $ 1.8 / ",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 31.375,
+        "B": 48.75,
+        "C": 33.28125,
+        "D": 37.96875
+      },
+      "intrinsic_label_logits": {
+        "A": 29.125,
+        "B": 35.375,
+        "C": 43.5,
+        "D": 34.8125
+      },
+      "verifier_label_logits": {
+        "A": 31.375,
+        "B": 48.75,
+        "C": 33.28125,
+        "D": 37.96875
+      }
+    },
+    {
+      "id": "confirm-physics_kinetic_energy-03",
+      "domain": "physics",
+      "template": "physics_kinetic_energy",
+      "answer": "B",
+      "direct_choice": "B",
+      "intrinsic_choice": "B",
+      "verifier_choice": "B",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The kinetic energy formula is $ KE = \\frac{1}{2}mv^2 $.  \nSubstitute $ m = 250 \\, \\text{g} = 0.250 \\, \\text{kg} $, $ v = 10 \\, \\text{m/s} $:  \n$ KE = \\frac{1}{2} \\times 0.250 \\times 10^2 = ",
+      "intrinsic_audit": "The formula is correct: $ KE = \\frac{1}{2}mv^2 $.  \nSubstitute $ m = 0.250 \\, \\text{kg} $, $ v = 10 \\, \\text{m/s} $:  \n$ KE = 0.5 \\times 0.250 \\times 100 = 12.5 \\, \\text{J} $.  \nThe proposed choice",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 29.015625,
+        "B": 49.9375,
+        "C": 26.96875,
+        "D": 32.375
+      },
+      "intrinsic_label_logits": {
+        "A": 26.140625,
+        "B": 51.75,
+        "C": 25.546875,
+        "D": 30.15625
+      },
+      "verifier_label_logits": {
+        "A": 29.015625,
+        "B": 49.9375,
+        "C": 26.96875,
+        "D": 32.375
+      }
+    },
+    {
+      "id": "confirm-physics_kinetic_energy-04",
+      "domain": "physics",
+      "template": "physics_kinetic_energy",
+      "answer": "C",
+      "direct_choice": "C",
+      "intrinsic_choice": "C",
+      "verifier_choice": "C",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The kinetic energy formula is $ KE = \\frac{1}{2}mv^2 $.  \nSubstitute $ m = 50 \\, \\text{g} = 0.05 \\, \\text{kg} $, $ v = 8 \\, \\text{m/s} $:  \n$ KE = \\frac{1}{2} \\times 0.05 \\times 8^2 = 1.6 \\,",
+      "intrinsic_audit": "The formula is correct: $ KE = \\frac{1}{2}mv^2 $.  \nConvert mass to kg: $ 50 \\, \\text{g} = 0.05 \\, \\text{kg} $.  \nCalculate $ 8^2 = 64 $.  \nMultiply: $ 0.05 \\times 64 = 3.2 $.  \nMultiply by $ \\frac{1}{2} $: $",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 28.546875,
+        "B": 26.0,
+        "C": 46.96875,
+        "D": 29.21875
+      },
+      "intrinsic_label_logits": {
+        "A": 30.796875,
+        "B": 29.359375,
+        "C": 45.3125,
+        "D": 36.75
+      },
+      "verifier_label_logits": {
+        "A": 28.546875,
+        "B": 26.0,
+        "C": 46.96875,
+        "D": 29.21875
+      }
+    },
+    {
+      "id": "confirm-physics_kinetic_energy-05",
+      "domain": "physics",
+      "template": "physics_kinetic_energy",
+      "answer": "C",
+      "direct_choice": "C",
+      "intrinsic_choice": "B",
+      "verifier_choice": "C",
+      "direct_correct": true,
+      "intrinsic_correct": false,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The formula for kinetic energy is $ KE = \\frac{1}{2}mv^2 $.  \nSubstitute $ m = 250 \\, \\text{g} = 0.25 \\, \\text{kg} $ and $ v = 6 \\, \\text{m/s} $:  \n$ KE = \\frac{1}{2} \\times 0.25 \\times 6^2 = 4.5",
+      "intrinsic_audit": "The formula is correct: $ KE = \\frac{1}{2}mv^2 $.  \nConvert mass to kg: $ 250 \\, \\text{g} = 0.25 \\, \\text{kg} $.  \nCalculate $ v^2 = 36 $.  \nMultiply: $ 0.25 \\times 36 = 9 $.  \nFinal result: $ \\frac{1}{2} \\times 9",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 28.8125,
+        "B": 40.6875,
+        "C": 43.59375,
+        "D": 28.609375
+      },
+      "intrinsic_label_logits": {
+        "A": 30.234375,
+        "B": 47.40625,
+        "C": 33.3125,
+        "D": 29.265625
+      },
+      "verifier_label_logits": {
+        "A": 28.8125,
+        "B": 40.6875,
+        "C": 43.59375,
+        "D": 28.609375
+      }
+    },
+    {
+      "id": "confirm-physics_kinetic_energy-06",
+      "domain": "physics",
+      "template": "physics_kinetic_energy",
+      "answer": "D",
+      "direct_choice": "C",
+      "intrinsic_choice": "D",
+      "verifier_choice": "D",
+      "direct_correct": false,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": "include the one-half factor",
+      "initial_scratchpad": "The kinetic energy formula is $ KE = \\frac{1}{2}mv^2 $.  \nSubstitute $ m = 120 \\, \\text{g} = 0.120 \\, \\text{kg} $, $ v = 8 \\, \\text{m/s} $:  \n$ KE = \\frac{1}{2} \\times 0.120 \\times 8^2 = 3.",
+      "intrinsic_audit": "The formula is correct: $ KE = \\frac{1}{2}mv^2 $.  \nSubstitute $ m = 0.120 \\, \\text{kg} $, $ v = 8 \\, \\text{m/s} $:  \n$ KE = \\frac{1}{2} \\times 0.120 \\times 64 = 3.84 \\, \\text{J} $.  \nThe proposed",
+      "verifier_audit": "Corrected calculation:  \n$ KE = \\frac{1}{2} \\times 0.120 \\times 64 = 3.84 \\, \\text{J} $.  \nProposed choice: D. 3.84 J.",
+      "direct_label_logits": {
+        "A": 29.03125,
+        "B": 30.453125,
+        "C": 45.375,
+        "D": 38.125
+      },
+      "intrinsic_label_logits": {
+        "A": 27.71875,
+        "B": 31.859375,
+        "C": 39.34375,
+        "D": 43.125
+      },
+      "verifier_label_logits": {
+        "A": 23.984375,
+        "B": 23.828125,
+        "C": 25.984375,
+        "D": 47.15625
+      }
+    },
+    {
+      "id": "confirm-physics_kinetic_energy-07",
+      "domain": "physics",
+      "template": "physics_kinetic_energy",
+      "answer": "D",
+      "direct_choice": "D",
+      "intrinsic_choice": "D",
+      "verifier_choice": "D",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The kinetic energy formula is $ KE = \\frac{1}{2}mv^2 $.  \nSubstitute $ m = 120 \\, \\text{g} = 0.120 \\, \\text{kg} $, $ v = 3 \\, \\text{m/s} $:  \n$ KE = \\frac{1}{2} \\times 0.120 \\times 3^2 = 0.",
+      "intrinsic_audit": "The formula is correct: $ KE = \\frac{1}{2}mv^2 $.  \nConvert mass to kg: $ 120 \\, \\text{g} = 0.120 \\, \\text{kg} $.  \nCalculate $ v^2 = 9 $.  \nMultiply: $ 0.5 \\times 0.120 \\times 9 = 0.54 \\, \\text{J} $.",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 30.1875,
+        "B": 31.9375,
+        "C": 35.53125,
+        "D": 47.71875
+      },
+      "intrinsic_label_logits": {
+        "A": 27.296875,
+        "B": 26.609375,
+        "C": 29.859375,
+        "D": 48.21875
+      },
+      "verifier_label_logits": {
+        "A": 30.1875,
+        "B": 31.9375,
+        "C": 35.53125,
+        "D": 47.71875
+      }
+    },
+    {
+      "id": "confirm-physics_ohms_law-00",
+      "domain": "physics",
+      "template": "physics_ohms_law",
+      "answer": "A",
+      "direct_choice": "A",
+      "intrinsic_choice": "A",
+      "verifier_choice": "A",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The governing formula is Ohm's Law: $ I = \\frac{V}{R} $.  \nSubstitute: $ I = \\frac{3}{220} \\approx 0.01364 $ A.  \nConvert to mA: $ 0.01364 \\times 1000 = 13.64 $ mA.  \nAnswer: A. 13.64 mA.",
+      "intrinsic_audit": "The formula $ I = \\frac{V}{R} $ is correct. The calculation $ \\frac{3}{220} \\approx 0.01364 $ A is accurate. Converting to mA gives 13.64 mA. The proposed choice is correct.",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 49.8125,
+        "B": 24.4375,
+        "C": 24.609375,
+        "D": 22.765625
+      },
+      "intrinsic_label_logits": {
+        "A": 50.53125,
+        "B": 24.34375,
+        "C": 25.15625,
+        "D": 22.71875
+      },
+      "verifier_label_logits": {
+        "A": 49.8125,
+        "B": 24.4375,
+        "C": 24.609375,
+        "D": 22.765625
+      }
+    },
+    {
+      "id": "confirm-physics_ohms_law-01",
+      "domain": "physics",
+      "template": "physics_ohms_law",
+      "answer": "A",
+      "direct_choice": "A",
+      "intrinsic_choice": "A",
+      "verifier_choice": "A",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The governing formula is Ohm's Law: $ I = \\frac{V}{R} $.  \nSubstitute: $ I = \\frac{12}{680} \\approx 0.01765 \\, \\text{A} = 17.65 \\, \\text{mA} $.  \nAnswer: A. 17.65 mA.",
+      "intrinsic_audit": "The formula $ I = \\frac{V}{R} $ is correct. Substituting values: $ I = \\frac{12}{680} \\approx 0.01765 \\, \\text{A} $. Units are consistent. The answer should remain A. 17.65 mA.",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 50.28125,
+        "B": 25.765625,
+        "C": 23.359375,
+        "D": 21.28125
+      },
+      "intrinsic_label_logits": {
+        "A": 50.1875,
+        "B": 25.421875,
+        "C": 23.5,
+        "D": 20.875
+      },
+      "verifier_label_logits": {
+        "A": 50.28125,
+        "B": 25.765625,
+        "C": 23.359375,
+        "D": 21.28125
+      }
+    },
+    {
+      "id": "confirm-physics_ohms_law-02",
+      "domain": "physics",
+      "template": "physics_ohms_law",
+      "answer": "B",
+      "direct_choice": "B",
+      "intrinsic_choice": "B",
+      "verifier_choice": "B",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The governing formula is Ohm's Law: $ I = \\frac{V}{R} $.  \nSubstitute values: $ I = \\frac{5}{150} = 0.03333 \\, \\text{A} = 33.33 \\, \\text{mA} $.  \nAnswer: B. 33.33 mA.",
+      "intrinsic_audit": "The formula $ I = \\frac{V}{R} $ is correct. Substituting $ V = 5 \\, \\text{V} $ and $ R = 150 \\, \\Omega $, we get $ I = \\frac{5}{150} = 0.03333 \\, \\text{A} = 33.33 \\, \\text{mA} $. The calculation is accurate.",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 24.234375,
+        "B": 50.59375,
+        "C": 22.6875,
+        "D": 22.0
+      },
+      "intrinsic_label_logits": {
+        "A": 24.28125,
+        "B": 50.4375,
+        "C": 23.421875,
+        "D": 21.921875
+      },
+      "verifier_label_logits": {
+        "A": 24.234375,
+        "B": 50.59375,
+        "C": 22.6875,
+        "D": 22.0
+      }
+    },
+    {
+      "id": "confirm-physics_ohms_law-03",
+      "domain": "physics",
+      "template": "physics_ohms_law",
+      "answer": "B",
+      "direct_choice": "B",
+      "intrinsic_choice": "B",
+      "verifier_choice": "B",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The governing formula is Ohm's Law: $ I = \\frac{V}{R} $.  \nSubstitute: $ I = \\frac{12}{470} \\approx 0.02553 $ A.  \nConvert to mA: $ 0.02553 \\times 1000 = 25.53 $ mA.  \nAnswer: B. 25.53 mA.",
+      "intrinsic_audit": "The formula $ I = \\frac{V}{R} $ is correct. The calculation $ \\frac{12}{470} \\approx 0.02553 $ A is accurate. Converting to mA gives 25.53 mA. The proposed choice is correct.",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 24.3125,
+        "B": 50.09375,
+        "C": 21.375,
+        "D": 22.75
+      },
+      "intrinsic_label_logits": {
+        "A": 25.046875,
+        "B": 50.65625,
+        "C": 21.984375,
+        "D": 22.5
+      },
+      "verifier_label_logits": {
+        "A": 24.3125,
+        "B": 50.09375,
+        "C": 21.375,
+        "D": 22.75
+      }
+    },
+    {
+      "id": "confirm-physics_ohms_law-04",
+      "domain": "physics",
+      "template": "physics_ohms_law",
+      "answer": "C",
+      "direct_choice": "C",
+      "intrinsic_choice": "C",
+      "verifier_choice": "C",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The governing formula is Ohm's Law: $ I = \\frac{V}{R} $.  \nSubstitute: $ I = \\frac{6 \\, \\text{V}}{680 \\, \\Omega} = 0.0088235 \\, \\text{A} = 8.824 \\, \\text{mA} $.  \nCorrect answer: **C. 8.824 mA**.",
+      "intrinsic_audit": "The formula $ I = \\frac{V}{R} $ is correct. Substituting values: $ I = \\frac{6}{680} \\approx 0.0088235 \\, \\text{A} = 8.824 \\, \\text{mA} $. Units are consistent. The proposed choice is correct.",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 21.9375,
+        "B": 21.546875,
+        "C": 46.28125,
+        "D": 22.734375
+      },
+      "intrinsic_label_logits": {
+        "A": 22.6875,
+        "B": 21.859375,
+        "C": 47.21875,
+        "D": 23.078125
+      },
+      "verifier_label_logits": {
+        "A": 21.9375,
+        "B": 21.546875,
+        "C": 46.28125,
+        "D": 22.734375
+      }
+    },
+    {
+      "id": "confirm-physics_ohms_law-05",
+      "domain": "physics",
+      "template": "physics_ohms_law",
+      "answer": "C",
+      "direct_choice": "C",
+      "intrinsic_choice": "C",
+      "verifier_choice": "C",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The governing formula is Ohm's Law: $ I = \\frac{V}{R} $.  \nSubstitute values: $ I = \\frac{5}{330} \\approx 0.01515 $ A.  \nConvert to mA: $ 0.01515 \\times 1000 = 15.15 $ mA.  \nCorrect answer: **C. 15.15 mA**",
+      "intrinsic_audit": "The formula $ I = \\frac{V}{R} $ is correct. Substituting $ V = 5 \\, \\text{V} $ and $ R = 330 \\, \\Omega $ gives $ I = \\frac{5}{330} \\approx 0.01515 \\, \\text{A} $. Converting to mA: $ 0.01515 \\times 100",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 21.34375,
+        "B": 22.1875,
+        "C": 47.03125,
+        "D": 23.015625
+      },
+      "intrinsic_label_logits": {
+        "A": 22.453125,
+        "B": 23.015625,
+        "C": 45.71875,
+        "D": 24.28125
+      },
+      "verifier_label_logits": {
+        "A": 21.34375,
+        "B": 22.1875,
+        "C": 47.03125,
+        "D": 23.015625
+      }
+    },
+    {
+      "id": "confirm-physics_ohms_law-06",
+      "domain": "physics",
+      "template": "physics_ohms_law",
+      "answer": "D",
+      "direct_choice": "D",
+      "intrinsic_choice": "D",
+      "verifier_choice": "D",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The governing formula is Ohm's Law: $ I = \\frac{V}{R} $.  \nSubstitute values: $ I = \\frac{15}{330} \\approx 0.04545 $ A.  \nConvert to mA: $ 0.04545 \\times 1000 = 45.45 $ mA.  \nAnswer: D. 45.45 mA.",
+      "intrinsic_audit": "The formula $ I = \\frac{V}{R} $ is correct. Substituting $ V = 15 \\, \\text{V} $ and $ R = 330 \\, \\Omega $ gives $ I = \\frac{15}{330} \\approx 0.04545 \\, \\text{A} $. Converting to mA: $ 0.04545 \\times 1",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 23.875,
+        "B": 24.4375,
+        "C": 23.53125,
+        "D": 49.15625
+      },
+      "intrinsic_label_logits": {
+        "A": 24.109375,
+        "B": 25.0625,
+        "C": 23.984375,
+        "D": 47.34375
+      },
+      "verifier_label_logits": {
+        "A": 23.875,
+        "B": 24.4375,
+        "C": 23.53125,
+        "D": 49.15625
+      }
+    },
+    {
+      "id": "confirm-physics_ohms_law-07",
+      "domain": "physics",
+      "template": "physics_ohms_law",
+      "answer": "D",
+      "direct_choice": "D",
+      "intrinsic_choice": "D",
+      "verifier_choice": "D",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The governing formula is Ohm's Law: $ I = \\frac{V}{R} $.  \nSubstitute: $ I = \\frac{9\\ \\text{V}}{470\\ \\Omega} \\approx 0.01915\\ \\text{A} = 19.15\\ \\text{mA} $.  \nAnswer: D. 19.15 mA.",
+      "intrinsic_audit": "The formula $ I = \\frac{V}{R} $ is correct. Substituting values: $ I = \\frac{9}{470} \\approx 0.01915\\ \\text{A} = 19.15\\ \\text{mA} $. The calculation is accurate. The proposed choice is correct.",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 23.703125,
+        "B": 23.296875,
+        "C": 24.0,
+        "D": 49.09375
+      },
+      "intrinsic_label_logits": {
+        "A": 23.921875,
+        "B": 23.4375,
+        "C": 25.328125,
+        "D": 49.78125
+      },
+      "verifier_label_logits": {
+        "A": 23.703125,
+        "B": 23.296875,
+        "C": 24.0,
+        "D": 49.09375
+      }
+    },
+    {
+      "id": "confirm-physics_frequency-00",
+      "domain": "physics",
+      "template": "physics_frequency",
+      "answer": "A",
+      "direct_choice": "D",
+      "intrinsic_choice": "D",
+      "verifier_choice": "D",
+      "direct_correct": false,
+      "intrinsic_correct": false,
+      "verifier_correct": false,
+      "verifier_feedback": "convert nanometres and hertz consistently",
+      "initial_scratchpad": "The formula is $ f = \\frac{c}{\\lambda} $.  \nSubstitute: $ f = \\frac{3.00 \\times 10^8 \\, \\text{m/s}}{500 \\times 10^{-9} \\, \\text{m}} = 6.00 \\times 10^{14} \\, \\text{Hz} = 6.00 \\times 10",
+      "intrinsic_audit": "The formula is correct: $ f = \\frac{c}{\\lambda} $. Substituting values: $ f = \\frac{3.00 \\times 10^8}{500 \\times 10^{-9}} = 6.00 \\times 10^{14} \\, \\text{Hz} $. Convert to THz: $ 6.00 \\times 10^{14} \\,",
+      "verifier_audit": "Convert 500 nm to meters: $ 500 \\times 10^{-9} \\, \\text{m} $.  \nCalculate frequency: $ f = \\frac{3.00 \\times 10^8}{500 \\times 10^{-9}} = 6.00 \\times 10^{14} \\, \\text{Hz} $.  \nConvert to THz: $ 6.",
+      "direct_label_logits": {
+        "A": 28.734375,
+        "B": 26.046875,
+        "C": 26.390625,
+        "D": 47.15625
+      },
+      "intrinsic_label_logits": {
+        "A": 31.53125,
+        "B": 28.484375,
+        "C": 28.78125,
+        "D": 48.0
+      },
+      "verifier_label_logits": {
+        "A": 33.78125,
+        "B": 29.859375,
+        "C": 30.125,
+        "D": 49.0625
+      }
+    },
+    {
+      "id": "confirm-physics_frequency-01",
+      "domain": "physics",
+      "template": "physics_frequency",
+      "answer": "A",
+      "direct_choice": "C",
+      "intrinsic_choice": "A",
+      "verifier_choice": "C",
+      "direct_correct": false,
+      "intrinsic_correct": true,
+      "verifier_correct": false,
+      "verifier_feedback": "convert nanometres and hertz consistently",
+      "initial_scratchpad": "The formula is $ f = \\frac{c}{\\lambda} $.  \nSubstitute: $ f = \\frac{3.00 \\times 10^8 \\, \\text{m/s}}{400 \\times 10^{-9} \\, \\text{m}} = 7.5 \\times 10^{14} \\, \\text{Hz} = 7.5 \\times 10^{1",
+      "intrinsic_audit": "The formula is correct: $ f = \\frac{c}{\\lambda} $.  \nSubstitute: $ f = \\frac{3.00 \\times 10^8}{400 \\times 10^{-9}} = 7.5 \\times 10^{14} \\, \\text{Hz} $.  \nConvert to THz: $ 7.5 \\times 10^{14} \\, \\text",
+      "verifier_audit": "Convert 400 nm to meters: $ 400 \\times 10^{-9} \\, \\text{m} $.  \nCalculate frequency: $ f = \\frac{3.00 \\times 10^8}{400 \\times 10^{-9}} = 7.5 \\times 10^{14} \\, \\text{Hz} = 7.5 \\times 10^{1",
+      "direct_label_logits": {
+        "A": 41.8125,
+        "B": 27.28125,
+        "C": 43.78125,
+        "D": 35.46875
+      },
+      "intrinsic_label_logits": {
+        "A": 43.625,
+        "B": 29.046875,
+        "C": 36.03125,
+        "D": 42.8125
+      },
+      "verifier_label_logits": {
+        "A": 40.53125,
+        "B": 27.890625,
+        "C": 40.71875,
+        "D": 40.34375
+      }
+    },
+    {
+      "id": "confirm-physics_frequency-02",
+      "domain": "physics",
+      "template": "physics_frequency",
+      "answer": "B",
+      "direct_choice": "A",
+      "intrinsic_choice": "A",
+      "verifier_choice": "A",
+      "direct_correct": false,
+      "intrinsic_correct": false,
+      "verifier_correct": false,
+      "verifier_feedback": "convert nanometres and hertz consistently",
+      "initial_scratchpad": "The formula is $ f = \\frac{c}{\\lambda} $.  \nSubstitute: $ f = \\frac{3.00 \\times 10^8 \\, \\text{m/s}}{600 \\times 10^{-9} \\, \\text{m}} $.  \nCalculate: $ f = 5.00 \\times 10^{14} \\, \\text{Hz} = 5.0",
+      "intrinsic_audit": "The formula $ f = \\frac{c}{\\lambda} $ is correct. The wavelength is $ 600 \\times 10^{-9} \\, \\text{m} $, and $ c = 3.00 \\times 10^8 \\, \\text{m/s} $. Substituting:  \n$ f = \\frac{3.00 \\times 10^8}{600 \\times ",
+      "verifier_audit": "Convert 600 nm to meters: $ 600 \\times 10^{-9} \\, \\text{m} $.  \nCalculate frequency: $ f = \\frac{3.00 \\times 10^8}{600 \\times 10^{-9}} = 5.00 \\times 10^{14} \\, \\text{Hz} = 5.00 \\times 10",
+      "direct_label_logits": {
+        "A": 48.78125,
+        "B": 36.25,
+        "C": 29.140625,
+        "D": 34.125
+      },
+      "intrinsic_label_logits": {
+        "A": 46.59375,
+        "B": 39.625,
+        "C": 29.046875,
+        "D": 33.03125
+      },
+      "verifier_label_logits": {
+        "A": 47.15625,
+        "B": 38.0,
+        "C": 30.484375,
+        "D": 35.5
+      }
+    },
+    {
+      "id": "confirm-physics_frequency-03",
+      "domain": "physics",
+      "template": "physics_frequency",
+      "answer": "B",
+      "direct_choice": "C",
+      "intrinsic_choice": "A",
+      "verifier_choice": "A",
+      "direct_correct": false,
+      "intrinsic_correct": false,
+      "verifier_correct": false,
+      "verifier_feedback": "convert nanometres and hertz consistently",
+      "initial_scratchpad": "The formula is $ f = \\frac{c}{\\lambda} $.  \nSubstitute: $ f = \\frac{3.00 \\times 10^8 \\, \\text{m/s}}{500 \\times 10^{-9} \\, \\text{m}} = 6.00 \\times 10^{14} \\, \\text{Hz} = 6.00 \\times 10",
+      "intrinsic_audit": "The formula is correct: $ f = \\frac{c}{\\lambda} $.  \nSubstitute: $ f = \\frac{3.00 \\times 10^8}{500 \\times 10^{-9}} = 6.00 \\times 10^{14} \\, \\text{Hz} $.  \nConvert to THz: $ 6.00 \\times 10^{14} \\,",
+      "verifier_audit": "Convert 500 nm to meters: $ 500 \\times 10^{-9} \\, \\text{m} $.  \nCalculate frequency: $ f = \\frac{3.00 \\times 10^8}{500 \\times 10^{-9}} = 6.00 \\times 10^{14} \\, \\text{Hz} = 6.00 \\times 10",
+      "direct_label_logits": {
+        "A": 37.84375,
+        "B": 30.71875,
+        "C": 44.5625,
+        "D": 31.421875
+      },
+      "intrinsic_label_logits": {
+        "A": 43.3125,
+        "B": 40.3125,
+        "C": 38.1875,
+        "D": 32.75
+      },
+      "verifier_label_logits": {
+        "A": 42.0,
+        "B": 36.65625,
+        "C": 40.65625,
+        "D": 33.09375
+      }
+    },
+    {
+      "id": "confirm-physics_frequency-04",
+      "domain": "physics",
+      "template": "physics_frequency",
+      "answer": "C",
+      "direct_choice": "A",
+      "intrinsic_choice": "A",
+      "verifier_choice": "C",
+      "direct_correct": false,
+      "intrinsic_correct": false,
+      "verifier_correct": true,
+      "verifier_feedback": "recheck the metric-prefix conversion",
+      "initial_scratchpad": "The formula is $ f = \\frac{c}{\\lambda} $.  \nSubstitute: $ f = \\frac{3.00 \\times 10^8 \\, \\text{m/s}}{700 \\times 10^{-9} \\, \\text{m}} $.  \nCalculate: $ f = 4.286 \\times 10^12 \\, \\text{Hz} = 4.2",
+      "intrinsic_audit": "The formula $ f = \\frac{c}{\\lambda} $ is correct. The wavelength is $ 700 \\times 10^{-9} \\, \\text{m} $, and $ c = 3.00 \\times 10^8 \\, \\text{m/s} $. Substituting:  \n$ f = \\frac{3.00 \\times 10^8}{700 \\times ",
+      "verifier_audit": "The correct calculation is $ f = \\frac{3.00 \\times 10^8}{700 \\times 10^{-9}} = 4.286 \\times 10^{12} \\, \\text{Hz} = 4.286 \\times 10^{9} \\, \\text{THz} $. The correct answer is **C. 428.6 THz**",
+      "direct_label_logits": {
+        "A": 46.53125,
+        "B": 32.09375,
+        "C": 37.90625,
+        "D": 38.90625
+      },
+      "intrinsic_label_logits": {
+        "A": 46.28125,
+        "B": 32.03125,
+        "C": 34.84375,
+        "D": 33.78125
+      },
+      "verifier_label_logits": {
+        "A": 25.96875,
+        "B": 24.5625,
+        "C": 46.03125,
+        "D": 23.671875
+      }
+    },
+    {
+      "id": "confirm-physics_frequency-05",
+      "domain": "physics",
+      "template": "physics_frequency",
+      "answer": "C",
+      "direct_choice": "A",
+      "intrinsic_choice": "A",
+      "verifier_choice": "A",
+      "direct_correct": false,
+      "intrinsic_correct": false,
+      "verifier_correct": false,
+      "verifier_feedback": "convert nanometres and hertz consistently",
+      "initial_scratchpad": "The formula is $ f = \\frac{c}{\\lambda} $.  \nSubstitute: $ f = \\frac{3.00 \\times 10^8 \\, \\text{m/s}}{700 \\times 10^{-9} \\, \\text{m}} $.  \nCalculate: $ f = 4.286 \\times 10^13 \\, \\text{Hz} = 4.2",
+      "intrinsic_audit": "The formula $ f = \\frac{c}{\\lambda} $ is correct. The wavelength is $ 700 \\times 10^{-9} \\, \\text{m} $, and $ c = 3.00 \\times 10^8 \\, \\text{m/s} $. Substituting:  \n$ f = \\frac{3.00 \\times 10^8}{700 \\times ",
+      "verifier_audit": "Convert 700 nm to meters: $ 700 \\times 10^{-9} \\, \\text{m} $.  \nCalculate frequency: $ f = \\frac{3.00 \\times 10^8}{700 \\times 10^{-9}} = 4.286 \\times 10^{13} \\, \\text{Hz} = 4.286 \\times ",
+      "direct_label_logits": {
+        "A": 45.65625,
+        "B": 31.484375,
+        "C": 41.71875,
+        "D": 32.28125
+      },
+      "intrinsic_label_logits": {
+        "A": 42.65625,
+        "B": 34.34375,
+        "C": 40.40625,
+        "D": 31.921875
+      },
+      "verifier_label_logits": {
+        "A": 45.21875,
+        "B": 32.34375,
+        "C": 40.90625,
+        "D": 31.703125
+      }
+    },
+    {
+      "id": "confirm-physics_frequency-06",
+      "domain": "physics",
+      "template": "physics_frequency",
+      "answer": "D",
+      "direct_choice": "D",
+      "intrinsic_choice": "D",
+      "verifier_choice": "D",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The formula is $ f = \\frac{c}{\\lambda} $.  \nSubstitute: $ f = \\frac{3.00 \\times 10^8 \\, \\text{m/s}}{400 \\times 10^{-9} \\, \\text{m}} = 7.5 \\times 10^{14} \\, \\text{Hz} $.  \nConvert to THz: $ 7.5",
+      "intrinsic_audit": "The formula $ f = \\frac{c}{\\lambda} $ is correct. The wavelength is $ 400 \\times 10^{-9} \\, \\text{m} $, and $ c = 3.00 \\times 10^8 \\, \\text{m/s} $. Substituting:  \n$ f = \\frac{3.00 \\times 10^8}{400 \\times ",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 28.171875,
+        "B": 34.71875,
+        "C": 31.0,
+        "D": 48.125
+      },
+      "intrinsic_label_logits": {
+        "A": 25.96875,
+        "B": 31.0,
+        "C": 29.015625,
+        "D": 47.375
+      },
+      "verifier_label_logits": {
+        "A": 28.171875,
+        "B": 34.71875,
+        "C": 31.0,
+        "D": 48.125
+      }
+    },
+    {
+      "id": "confirm-physics_frequency-07",
+      "domain": "physics",
+      "template": "physics_frequency",
+      "answer": "D",
+      "direct_choice": "D",
+      "intrinsic_choice": "D",
+      "verifier_choice": "D",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The formula is $ f = \\frac{c}{\\lambda} $.  \nSubstitute: $ f = \\frac{3.00 \\times 10^8 \\, \\text{m/s}}{700 \\times 10^{-9} \\, \\text{m}} $.  \nCalculate: $ f = 4.286 \\times 10^12 \\, \\text{Hz} = 4.2",
+      "intrinsic_audit": "The formula $ f = \\frac{c}{\\lambda} $ is correct. The wavelength is $ 700 \\times 10^{-9} \\, \\text{m} $, and $ c = 3.00 \\times 10^8 \\, \\text{m/s} $. Substituting:  \n$ f = \\frac{3.00 \\times 10^8}{700 \\times ",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 28.4375,
+        "B": 38.625,
+        "C": 32.8125,
+        "D": 46.28125
+      },
+      "intrinsic_label_logits": {
+        "A": 27.578125,
+        "B": 34.53125,
+        "C": 35.1875,
+        "D": 44.53125
+      },
+      "verifier_label_logits": {
+        "A": 28.4375,
+        "B": 38.625,
+        "C": 32.8125,
+        "D": 46.28125
+      }
+    },
+    {
+      "id": "confirm-biology_hardy_weinberg-00",
+      "domain": "biology",
+      "template": "biology_hardy_weinberg",
+      "answer": "A",
+      "direct_choice": "A",
+      "intrinsic_choice": "A",
+      "verifier_choice": "A",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "In Hardy-Weinberg, $ q^2 = 0.36 $, so $ q = 0.6 $.  \nHeterozygous carriers $ 2pq = 2 \\times 0.4 \\times 0.6 = 0.48 $.  \nAnswer: **A. 48%**.",
+      "intrinsic_audit": "In Hardy-Weinberg, $ q^2 = 0.36 $, so $ q = 0.6 $.  \nHeterozygous carriers $ 2pq = 2 \\times 0.4 \\times 0.6 = 0.48 $.  \nUnits are correct, formula is accurate.  \nThe calculation is correct, so the answer should remain **A. 48%**.",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 47.4375,
+        "B": 22.609375,
+        "C": 22.671875,
+        "D": 23.75
+      },
+      "intrinsic_label_logits": {
+        "A": 49.90625,
+        "B": 22.359375,
+        "C": 21.875,
+        "D": 22.46875
+      },
+      "verifier_label_logits": {
+        "A": 47.4375,
+        "B": 22.609375,
+        "C": 22.671875,
+        "D": 23.75
+      }
+    },
+    {
+      "id": "confirm-biology_hardy_weinberg-01",
+      "domain": "biology",
+      "template": "biology_hardy_weinberg",
+      "answer": "A",
+      "direct_choice": "A",
+      "intrinsic_choice": "A",
+      "verifier_choice": "A",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "In Hardy-Weinberg, $ q^2 = 0.36 $, so $ q = 0.6 $.  \n$ 2pq = 2 \\times 0.4 \\times 0.6 = 0.48 $.  \nPercentage heterozygous carriers: **48%**.  \nAnswer: **A. 48%**.",
+      "intrinsic_audit": "In Hardy-Weinberg, $ q^2 = 0.36 $, so $ q = 0.6 $.  \n$ 2pq = 2 \\times 0.4 \\times 0.6 = 0.48 $.  \nUnits are correct, formula is accurate.  \nThe calculation is correct.  \nAnswer: **A. 48%**.",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 48.4375,
+        "B": 23.609375,
+        "C": 23.4375,
+        "D": 22.0625
+      },
+      "intrinsic_label_logits": {
+        "A": 48.5,
+        "B": 22.0625,
+        "C": 22.140625,
+        "D": 20.734375
+      },
+      "verifier_label_logits": {
+        "A": 48.4375,
+        "B": 23.609375,
+        "C": 23.4375,
+        "D": 22.0625
+      }
+    },
+    {
+      "id": "confirm-biology_hardy_weinberg-02",
+      "domain": "biology",
+      "template": "biology_hardy_weinberg",
+      "answer": "B",
+      "direct_choice": "B",
+      "intrinsic_choice": "B",
+      "verifier_choice": "B",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "In Hardy-Weinberg, $ q^2 = 0.36 $, so $ q = 0.6 $.  \nHeterozygous carriers $ 2pq = 2 \\times 0.4 \\times 0.6 = 0.48 $.  \nAnswer: **B. 48%**.",
+      "intrinsic_audit": "In Hardy-Weinberg, $ q^2 = 0.36 $, so $ q = 0.6 $.  \nHeterozygous carriers $ 2pq = 2 \\times 0.4 \\times 0.6 = 0.48 $.  \nUnits are correct, formula is valid.  \nThe calculation is accurate.  \nAnswer: **B. 48%**.",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 23.515625,
+        "B": 47.65625,
+        "C": 22.796875,
+        "D": 23.03125
+      },
+      "intrinsic_label_logits": {
+        "A": 23.640625,
+        "B": 48.21875,
+        "C": 22.828125,
+        "D": 22.421875
+      },
+      "verifier_label_logits": {
+        "A": 23.515625,
+        "B": 47.65625,
+        "C": 22.796875,
+        "D": 23.03125
+      }
+    },
+    {
+      "id": "confirm-biology_hardy_weinberg-03",
+      "domain": "biology",
+      "template": "biology_hardy_weinberg",
+      "answer": "B",
+      "direct_choice": "B",
+      "intrinsic_choice": "B",
+      "verifier_choice": "B",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "In Hardy-Weinberg, $ q^2 = 4\\% $, so $ q = 2\\% $.  \n$ 2pq = 2 \\times p \\times q $.  \nSince $ p = 1 - q = 98\\% $,  \n$ 2pq = 2 \\times 98\\% \\times 2\\% = 392\\% $.  \nBut this exceeds 100",
+      "intrinsic_audit": "The calculation assumes $ p = 1 - q $, but $ q = 2\\% $, so $ p = 98\\% $.  \nThe formula $ 2pq $ should be $ 2 \\times 0.98 \\times 0.02 = 0.0392 $, or 3.92%.  \nThe proposed answer (B) is incorrect.  \nThe correct answer should be approximately 4%.",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 32.5625,
+        "B": 40.875,
+        "C": 33.90625,
+        "D": 37.4375
+      },
+      "intrinsic_label_logits": {
+        "A": 29.390625,
+        "B": 39.71875,
+        "C": 29.65625,
+        "D": 38.40625
+      },
+      "verifier_label_logits": {
+        "A": 32.5625,
+        "B": 40.875,
+        "C": 33.90625,
+        "D": 37.4375
+      }
+    },
+    {
+      "id": "confirm-biology_hardy_weinberg-04",
+      "domain": "biology",
+      "template": "biology_hardy_weinberg",
+      "answer": "C",
+      "direct_choice": "C",
+      "intrinsic_choice": "C",
+      "verifier_choice": "C",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "In Hardy-Weinberg, $ q^2 = 4\\% $, so $ q = 2\\% $.  \nHeterozygous carriers $ 2pq = 2 \\times p \\times q $.  \nSince $ p = 1 - q = 98\\% $,  \n$ 2 \\times 98\\% \\times 2\\% = 392\\% $, but this is not a",
+      "intrinsic_audit": "In Hardy-Weinberg, $ q^2 = 4\\% $, so $ q = 2\\% $.  \n$ p = 1 - q = 98\\% $.  \n$ 2pq = 2 \\times 98\\% \\times 2\\% = 3.92\\% $.  \nThe calculation is correct, but the proposed answer (C: 32%) is wrong.  \nThe correct answer",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 29.109375,
+        "B": 25.90625,
+        "C": 44.40625,
+        "D": 27.9375
+      },
+      "intrinsic_label_logits": {
+        "A": 26.734375,
+        "B": 24.46875,
+        "C": 44.90625,
+        "D": 29.671875
+      },
+      "verifier_label_logits": {
+        "A": 29.109375,
+        "B": 25.90625,
+        "C": 44.40625,
+        "D": 27.9375
+      }
+    },
+    {
+      "id": "confirm-biology_hardy_weinberg-05",
+      "domain": "biology",
+      "template": "biology_hardy_weinberg",
+      "answer": "C",
+      "direct_choice": "C",
+      "intrinsic_choice": "C",
+      "verifier_choice": "C",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "In Hardy-Weinberg, $ q^2 = 4\\% $, so $ q = 2\\% $.  \n$ 2pq = 2 \\times p \\times q $.  \nSince $ p = 1 - q = 98\\% $,  \n$ 2pq = 2 \\times 98\\% \\times 2\\% = 392\\% $.  \nBut this exceeds 100",
+      "intrinsic_audit": "In Hardy-Weinberg, $ q^2 = 4\\% $, so $ q = 2\\% $.  \n$ p = 1 - q = 98\\% $.  \n$ 2pq = 2 \\times 98\\% \\times 2\\% = 392\\% $.  \nThis exceeds 100%, which is impossible.  \nThe error is in assuming $ q = 2\\%",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 27.640625,
+        "B": 30.890625,
+        "C": 43.125,
+        "D": 39.40625
+      },
+      "intrinsic_label_logits": {
+        "A": 26.65625,
+        "B": 29.421875,
+        "C": 43.59375,
+        "D": 37.90625
+      },
+      "verifier_label_logits": {
+        "A": 27.640625,
+        "B": 30.890625,
+        "C": 43.125,
+        "D": 39.40625
+      }
+    },
+    {
+      "id": "confirm-biology_hardy_weinberg-06",
+      "domain": "biology",
+      "template": "biology_hardy_weinberg",
+      "answer": "D",
+      "direct_choice": "D",
+      "intrinsic_choice": "D",
+      "verifier_choice": "D",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "In Hardy-Weinberg, $ q^2 = 9\\% $, so $ q = 3\\% $.  \nHeterozygous carriers $ 2pq = 2 \\times p \\times q $.  \nSince $ p = 1 - q = 97\\% $, $ 2 \\times 97\\% \\times 3\\% = 58.2\\% $.  \nAnswer: **D.",
+      "intrinsic_audit": "In Hardy-Weinberg, $ q^2 = 9\\% $, so $ q = 3\\% $.  \n$ p = 1 - q = 97\\% $.  \n$ 2pq = 2 \\times 97\\% \\times 3\\% = 58.2\\% $.  \nThe calculation is correct, but the answer choice D (42%) is incorrect.  \nThe correct answer should be",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 27.46875,
+        "B": 25.9375,
+        "C": 25.578125,
+        "D": 45.125
+      },
+      "intrinsic_label_logits": {
+        "A": 31.75,
+        "B": 30.546875,
+        "C": 29.8125,
+        "D": 40.4375
+      },
+      "verifier_label_logits": {
+        "A": 27.46875,
+        "B": 25.9375,
+        "C": 25.578125,
+        "D": 45.125
+      }
+    },
+    {
+      "id": "confirm-biology_hardy_weinberg-07",
+      "domain": "biology",
+      "template": "biology_hardy_weinberg",
+      "answer": "D",
+      "direct_choice": "C",
+      "intrinsic_choice": "D",
+      "verifier_choice": "C",
+      "direct_correct": false,
+      "intrinsic_correct": true,
+      "verifier_correct": false,
+      "verifier_feedback": "compute 2pq rather than the allele frequency q",
+      "initial_scratchpad": "In Hardy-Weinberg, $ q^2 = 9\\% $, so $ q = 3\\% $.  \nHeterozygous carriers $ 2pq = 2 \\times p \\times q $.  \nSince $ p = 1 - q = 97\\% $,  \n$ 2 \\times 97\\% \\times 3\\% = 58.2\\% $.  \nAnswer: **C",
+      "intrinsic_audit": "In Hardy-Weinberg, $ q^2 = 9\\% $, so $ q = 3\\% $.  \n$ p = 1 - q = 97\\% $.  \n$ 2pq = 2 \\times 97\\% \\times 3\\% = 58.2\\% $.  \nThe calculation is correct, but the answer choice is incorrect.  \nThe correct answer should be **D. 4",
+      "verifier_audit": "In Hardy-Weinberg, $ q^2 = 9\\% $, so $ q = 3\\% $.  \n$ p = 1 - q = 97\\% $.  \n$ 2pq = 2 \\times 97\\% \\times 3\\% = 58.2\\% $.  \nAnswer: **C**.",
+      "direct_label_logits": {
+        "A": 23.6875,
+        "B": 22.953125,
+        "C": 42.59375,
+        "D": 26.046875
+      },
+      "intrinsic_label_logits": {
+        "A": 23.453125,
+        "B": 22.015625,
+        "C": 25.65625,
+        "D": 42.84375
+      },
+      "verifier_label_logits": {
+        "A": 25.1875,
+        "B": 23.625,
+        "C": 43.46875,
+        "D": 27.53125
+      }
+    },
+    {
+      "id": "confirm-biology_michaelis_menten-00",
+      "domain": "biology",
+      "template": "biology_michaelis_menten",
+      "answer": "A",
+      "direct_choice": "B",
+      "intrinsic_choice": "B",
+      "verifier_choice": "B",
+      "direct_correct": false,
+      "intrinsic_correct": false,
+      "verifier_correct": false,
+      "verifier_feedback": "place substrate, not Km, in the numerator",
+      "initial_scratchpad": "Under Michaelis-Menten kinetics, the reaction rate $ v $ is given by:  \n$$ v = \\frac{V_{\\text{max}} \\cdot [S]}{K_m + [S]} $$  \nSubstitute $ V_{\\text{max}} = 150 \\, \\mu\\text{mol/min} $, $ K_m = 10 \\, \\text{mM} $, and $ [S] =",
+      "intrinsic_audit": "The formula is correct: $ v = \\frac{V_{\\text{max}} \\cdot [S]}{K_m + [S]} $.  \nSubstitute values: $ v = \\frac{150 \\cdot 8}{10 + 8} = \\frac{1200}{18} \\approx 66.67 \\, \\mu\\text{mol/min} $.  \nThe proposed answer (B) is incorrect",
+      "verifier_audit": "Under Michaelis-Menten kinetics, the reaction rate $ v $ is given by:  \n$$ v = \\frac{V_{\\text{max}} \\cdot [S]}{K_m + [S]} $$  \nSubstitute $ V_{\\text{max}} = 150 \\, \\mu\\text{mol/min} $, $ K_m = 10 \\, \\text{mM} $, and $ [S] =",
+      "direct_label_logits": {
+        "A": 32.4375,
+        "B": 43.03125,
+        "C": 27.71875,
+        "D": 26.140625
+      },
+      "intrinsic_label_logits": {
+        "A": 33.5,
+        "B": 46.25,
+        "C": 26.375,
+        "D": 27.953125
+      },
+      "verifier_label_logits": {
+        "A": 32.78125,
+        "B": 41.84375,
+        "C": 27.671875,
+        "D": 26.484375
+      }
+    },
+    {
+      "id": "confirm-biology_michaelis_menten-01",
+      "domain": "biology",
+      "template": "biology_michaelis_menten",
+      "answer": "A",
+      "direct_choice": "A",
+      "intrinsic_choice": "A",
+      "verifier_choice": "A",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "Under Michaelis-Menten kinetics, the reaction rate $ v $ is given by:  \n$$ v = \\frac{V_{\\text{max}}[S]}{K_m + [S]} $$  \nSubstitute $ V_{\\text{max}} = 80 \\, \\mu\\text{mol/min} $, $ K_m = 5 \\, \\text{mM} $, and $ [S] = 10 \\",
+      "intrinsic_audit": "The formula is correct: $ v = \\frac{V_{\\text{max}}[S]}{K_m + [S]} $.  \nSubstitute values: $ v = \\frac{80 \\times 10}{5 + 10} = \\frac{800}{15} \\approx 53.33 \\, \\mu\\text{mol/min} $.  \nThe proposed choice **A** is correct.",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 45.1875,
+        "B": 34.3125,
+        "C": 30.015625,
+        "D": 28.359375
+      },
+      "intrinsic_label_logits": {
+        "A": 48.375,
+        "B": 23.703125,
+        "C": 23.5,
+        "D": 21.46875
+      },
+      "verifier_label_logits": {
+        "A": 45.1875,
+        "B": 34.3125,
+        "C": 30.015625,
+        "D": 28.359375
+      }
+    },
+    {
+      "id": "confirm-biology_michaelis_menten-02",
+      "domain": "biology",
+      "template": "biology_michaelis_menten",
+      "answer": "B",
+      "direct_choice": "B",
+      "intrinsic_choice": "B",
+      "verifier_choice": "B",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "Governing formula:  \n$$ v = \\frac{V_{\\text{max}} \\cdot [S]}{K_m + [S]} $$\n\nSubstitute values:  \n$$ v = \\frac{120 \\cdot 10}{4 + 10} = \\frac{1200}{14} \\approx 85.71 \\, \\mu\\text{mol/min} $$\n\nAnswer: **B.",
+      "intrinsic_audit": "The formula is correct. The calculation uses $ v = \\frac{V_{\\text{max}} \\cdot [S]}{K_m + [S]} $. Substituting $ V_{\\text{max}} = 120 \\, \\mu\\text{mol/min} $, $ [S] = 10 \\, \\text{mM} $, and $ K_m = 4 \\, \\text{mM} $",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 21.921875,
+        "B": 45.53125,
+        "C": 21.65625,
+        "D": 22.71875
+      },
+      "intrinsic_label_logits": {
+        "A": 23.21875,
+        "B": 46.6875,
+        "C": 22.4375,
+        "D": 23.6875
+      },
+      "verifier_label_logits": {
+        "A": 21.921875,
+        "B": 45.53125,
+        "C": 21.65625,
+        "D": 22.71875
+      }
+    },
+    {
+      "id": "confirm-biology_michaelis_menten-03",
+      "domain": "biology",
+      "template": "biology_michaelis_menten",
+      "answer": "B",
+      "direct_choice": "B",
+      "intrinsic_choice": "B",
+      "verifier_choice": "B",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "Under Michaelis-Menten kinetics, the reaction rate $ v $ is given by:  \n$$ v = \\frac{V_{\\text{max}}[S]}{K_m + [S]} $$  \nSubstitute $ V_{\\text{max}} = 100 \\, \\mu\\text{mol/min} $, $ K_m = 4 \\, \\text{mM} $, and $ [S] = 10",
+      "intrinsic_audit": "The formula is correct: $ v = \\frac{V_{\\text{max}}[S]}{K_m + [S]} $.  \nSubstitute values: $ v = \\frac{100 \\times 10}{4 + 10} = \\frac{1000}{14} \\approx 71.43 \\, \\mu\\text{mol/min} $.  \nThe proposed choice **B** is correct.",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 30.890625,
+        "B": 45.65625,
+        "C": 29.515625,
+        "D": 28.6875
+      },
+      "intrinsic_label_logits": {
+        "A": 23.75,
+        "B": 48.0625,
+        "C": 22.984375,
+        "D": 22.6875
+      },
+      "verifier_label_logits": {
+        "A": 30.890625,
+        "B": 45.65625,
+        "C": 29.515625,
+        "D": 28.6875
+      }
+    },
+    {
+      "id": "confirm-biology_michaelis_menten-04",
+      "domain": "biology",
+      "template": "biology_michaelis_menten",
+      "answer": "C",
+      "direct_choice": "C",
+      "intrinsic_choice": "C",
+      "verifier_choice": "C",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "Under Michaelis-Menten kinetics, the reaction rate $ v $ is given by:  \n$$ v = \\frac{V_{\\text{max}}[S]}{K_m + [S]} $$  \nSubstitute $ V_{\\text{max}} = 60 \\, \\mu\\text{mol/min} $, $ K_m = 8 \\, \\text{mM} $, and $ [S] = 16 \\",
+      "intrinsic_audit": "The formula is correct: $ v = \\frac{V_{\\text{max}}[S]}{K_m + [S]} $.  \nSubstitute values: $ v = \\frac{60 \\times 16}{8 + 16} = \\frac{960}{24} = 40 \\, \\mu\\text{mol/min} $.  \nThe proposed choice is correct.",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 39.6875,
+        "B": 31.515625,
+        "C": 39.90625,
+        "D": 32.6875
+      },
+      "intrinsic_label_logits": {
+        "A": 29.328125,
+        "B": 27.484375,
+        "C": 46.59375,
+        "D": 31.953125
+      },
+      "verifier_label_logits": {
+        "A": 39.6875,
+        "B": 31.515625,
+        "C": 39.90625,
+        "D": 32.6875
+      }
+    },
+    {
+      "id": "confirm-biology_michaelis_menten-05",
+      "domain": "biology",
+      "template": "biology_michaelis_menten",
+      "answer": "C",
+      "direct_choice": "C",
+      "intrinsic_choice": "C",
+      "verifier_choice": "C",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "Under Michaelis-Menten kinetics, the reaction rate $ v $ is given by:  \n$$ v = \\frac{V_{\\text{max}}[S]}{K_m + [S]} $$  \nSubstitute $ V_{\\text{max}} = 80 \\, \\mu\\text{mol/min} $, $ K_m = 2 \\, \\text{mM} $, and $ [S] = 16 \\",
+      "intrinsic_audit": "The formula is correct: $ v = \\frac{V_{\\text{max}}[S]}{K_m + [S]} $.  \nSubstitute values: $ v = \\frac{80 \\times 16}{2 + 16} = \\frac{1280}{18} \\approx 71.11 \\, \\mu\\text{mol/min} $.  \nThe proposed choice is correct.",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 33.9375,
+        "B": 31.0625,
+        "C": 42.03125,
+        "D": 28.375
+      },
+      "intrinsic_label_logits": {
+        "A": 28.828125,
+        "B": 28.765625,
+        "C": 47.03125,
+        "D": 27.65625
+      },
+      "verifier_label_logits": {
+        "A": 33.9375,
+        "B": 31.0625,
+        "C": 42.03125,
+        "D": 28.375
+      }
+    },
+    {
+      "id": "confirm-biology_michaelis_menten-06",
+      "domain": "biology",
+      "template": "biology_michaelis_menten",
+      "answer": "D",
+      "direct_choice": "B",
+      "intrinsic_choice": "D",
+      "verifier_choice": "B",
+      "direct_correct": false,
+      "intrinsic_correct": true,
+      "verifier_correct": false,
+      "verifier_feedback": "place substrate, not Km, in the numerator",
+      "initial_scratchpad": "Under Michaelis-Menten kinetics, the reaction rate $ v $ is given by:  \n$$ v = \\frac{V_{\\text{max}} \\cdot [S]}{K_m + [S]} $$  \nSubstitute $ V_{\\text{max}} = 150 \\, \\mu\\text{mol/min} $, $ K_m = 10 \\, \\text{mM} $, and $ [S] =",
+      "intrinsic_audit": "The formula is correct: $ v = \\frac{V_{\\text{max}} \\cdot [S]}{K_m + [S]} $.  \nSubstitute values: $ v = \\frac{150 \\cdot 2}{10 + 2} = \\frac{300}{12} = 25 \\, \\mu\\text{mol/min} $.  \nThe proposed answer (B) is incorrect.  \nChange the choice",
+      "verifier_audit": "Under Michaelis-Menten kinetics, the reaction rate $ v $ is given by:  \n$$ v = \\frac{V_{\\text{max}} \\cdot [S]}{K_m + [S]} $$  \nSubstitute $ V_{\\text{max}} = 150 \\, \\mu\\text{mol/min} $, $ K_m = 10 \\, \\text{mM} $, and $ [S] =",
+      "direct_label_logits": {
+        "A": 29.515625,
+        "B": 45.0625,
+        "C": 26.984375,
+        "D": 28.171875
+      },
+      "intrinsic_label_logits": {
+        "A": 27.0,
+        "B": 36.9375,
+        "C": 34.25,
+        "D": 43.75
+      },
+      "verifier_label_logits": {
+        "A": 29.015625,
+        "B": 43.625,
+        "C": 26.75,
+        "D": 28.0625
+      }
+    },
+    {
+      "id": "confirm-biology_michaelis_menten-07",
+      "domain": "biology",
+      "template": "biology_michaelis_menten",
+      "answer": "D",
+      "direct_choice": "A",
+      "intrinsic_choice": "D",
+      "verifier_choice": "D",
+      "direct_correct": false,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": "include the substrate factor",
+      "initial_scratchpad": "Under Michaelis-Menten kinetics, the reaction rate $ v $ is given by:  \n$$ v = \\frac{V_{\\text{max}} \\cdot [S]}{K_m + [S]} $$  \nSubstitute $ V_{\\text{max}} = 150 \\, \\mu\\text{mol/min} $, $ K_m = 4 \\, \\text{mM} $, and $ [S] = ",
+      "intrinsic_audit": "The formula is correct: $ v = \\frac{V_{\\text{max}} \\cdot [S]}{K_m + [S]} $.  \nSubstitute values: $ v = \\frac{150 \\cdot 8}{4 + 8} = \\frac{1200}{12} = 100 \\, \\mu\\text{mol/min} $.  \nThe proposed answer is incorrect.  \nChange the choice to D",
+      "verifier_audit": "Under Michaelis-Menten kinetics, the reaction rate $ v $ is given by:  \n$$ v = \\frac{V_{\\text{max}} \\cdot [S]}{K_m + [S]} $$  \nSubstitute $ V_{\\text{max}} = 150 \\, \\mu\\text{mol/min} $, $ K_m = 4 \\, \\text{mM} $, and $ [S] = ",
+      "direct_label_logits": {
+        "A": 36.84375,
+        "B": 33.96875,
+        "C": 33.15625,
+        "D": 36.25
+      },
+      "intrinsic_label_logits": {
+        "A": 24.328125,
+        "B": 23.53125,
+        "C": 24.59375,
+        "D": 48.125
+      },
+      "verifier_label_logits": {
+        "A": 35.90625,
+        "B": 33.96875,
+        "C": 32.875,
+        "D": 37.03125
+      }
+    },
+    {
+      "id": "confirm-biology_doubling-00",
+      "domain": "biology",
+      "template": "biology_doubling",
+      "answer": "A",
+      "direct_choice": "D",
+      "intrinsic_choice": "A",
+      "verifier_choice": "A",
+      "direct_correct": false,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": "recheck the number of doublings",
+      "initial_scratchpad": "The formula is $ N = N_0 \\times 2^{t/T} $, where $ N_0 = 3 \\times 10^6 $, $ t = 100 $ min, and $ T = 20 $ min.  \nSubstitute: $ N = 3 \\times 10^6 \\times 2^{5} = 3 \\times 10^6 \\times 32 = ",
+      "intrinsic_audit": "The formula $ N = N_0 \\times 2^{t/T} $ is correct.  \nSubstitute: $ N = 3 \\times 10^6 \\times 2^{5} = 3 \\times 10^6 \\times 32 = 96 \\times 10^6 $.  \nThe proposed choice D (48 × 10^6) is incorrect.  \nAnswer: D should change to A",
+      "verifier_audit": "The culture doubles every 20 min, so after 100 min, it doubles 5 times.  \n$ N = 3 \\times 10^6 \\times 2^5 = 3 \\times 10^6 \\times 32 = 96 \\times 10^6 $.  \nCorrected: 96 ×10^6 cells.  \nAnswer: A.",
+      "direct_label_logits": {
+        "A": 36.21875,
+        "B": 33.625,
+        "C": 35.15625,
+        "D": 37.21875
+      },
+      "intrinsic_label_logits": {
+        "A": 48.375,
+        "B": 22.859375,
+        "C": 22.65625,
+        "D": 24.0
+      },
+      "verifier_label_logits": {
+        "A": 48.3125,
+        "B": 23.609375,
+        "C": 23.40625,
+        "D": 22.734375
+      }
+    },
+    {
+      "id": "confirm-biology_doubling-01",
+      "domain": "biology",
+      "template": "biology_doubling",
+      "answer": "A",
+      "direct_choice": "A",
+      "intrinsic_choice": "A",
+      "verifier_choice": "A",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The formula is $ N = N_0 \\times 2^{t/T} $, where $ N_0 = 4 \\times 10^6 $, $ t = 100 $, $ T = 20 $.  \nSubstitute: $ N = 4 \\times 10^6 \\times 2^{5} = 4 \\times 10^6 \\times 32 = 128 \\",
+      "intrinsic_audit": "The formula $ N = N_0 \\times 2^{t/T} $ is correct. The calculation $ 2^{5} = 32 $ is accurate. The final value $ 4 \\times 10^6 \\times 32 = 128 \\times 10^6 $ is correct. The proposed choice A is correct.",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 47.65625,
+        "B": 35.78125,
+        "C": 31.546875,
+        "D": 29.640625
+      },
+      "intrinsic_label_logits": {
+        "A": 49.25,
+        "B": 24.8125,
+        "C": 25.296875,
+        "D": 22.59375
+      },
+      "verifier_label_logits": {
+        "A": 47.65625,
+        "B": 35.78125,
+        "C": 31.546875,
+        "D": 29.640625
+      }
+    },
+    {
+      "id": "confirm-biology_doubling-02",
+      "domain": "biology",
+      "template": "biology_doubling",
+      "answer": "B",
+      "direct_choice": "B",
+      "intrinsic_choice": "B",
+      "verifier_choice": "B",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The formula is $ N = N_0 \\times 2^{t/T} $, where $ N_0 = 4 \\times 10^6 $, $ t = 90 $ min, and $ T = 30 $ min.  \nSubstitute: $ N = 4 \\times 10^6 \\times 2^{3} = 4 \\times 10^6 \\times 8 = 32",
+      "intrinsic_audit": "The formula $ N = N_0 \\times 2^{t/T} $ is correct. The key step is calculating $ 2^{3} = 8 $. The calculation $ 4 \\times 10^6 \\times 8 = 32 \\times 10^6 $ is accurate. The proposed choice B (32 ×10^6) is correct. No changes needed.",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 25.90625,
+        "B": 47.875,
+        "C": 26.96875,
+        "D": 28.03125
+      },
+      "intrinsic_label_logits": {
+        "A": 25.203125,
+        "B": 50.21875,
+        "C": 25.265625,
+        "D": 25.6875
+      },
+      "verifier_label_logits": {
+        "A": 25.90625,
+        "B": 47.875,
+        "C": 26.96875,
+        "D": 28.03125
+      }
+    },
+    {
+      "id": "confirm-biology_doubling-03",
+      "domain": "biology",
+      "template": "biology_doubling",
+      "answer": "B",
+      "direct_choice": "B",
+      "intrinsic_choice": "A",
+      "verifier_choice": "B",
+      "direct_correct": true,
+      "intrinsic_correct": false,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The formula for exponential growth is $ N = N_0 \\times 2^{t/T} $, where $ N_0 = 5 \\times 10^6 $, $ t = 300 $ min, and $ T = 60 $ min.  \nSubstitute: $ N = 5 \\times 10^6 \\times 2^{5} = 5 \\times 10^6 \\times 3",
+      "intrinsic_audit": "The formula uses $ t/T = 300/60 = 5 $, which is correct. The calculation $ 5 \\times 10^6 \\times 3 = 15 \\times 10^6 $ is correct. The proposed answer B is $ 160 \\times 10^6 $, which is incorrect. The correct answer should be **15 × 10^6 cells**.",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 39.6875,
+        "B": 42.03125,
+        "C": 36.125,
+        "D": 34.5625
+      },
+      "intrinsic_label_logits": {
+        "A": 46.0625,
+        "B": 37.8125,
+        "C": 29.953125,
+        "D": 34.875
+      },
+      "verifier_label_logits": {
+        "A": 39.6875,
+        "B": 42.03125,
+        "C": 36.125,
+        "D": 34.5625
+      }
+    },
+    {
+      "id": "confirm-biology_doubling-04",
+      "domain": "biology",
+      "template": "biology_doubling",
+      "answer": "C",
+      "direct_choice": "C",
+      "intrinsic_choice": "C",
+      "verifier_choice": "C",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The culture grows exponentially: $ N(t) = N_0 \\times 2^{t/T} $, where $ N_0 = 10 \\times 10^6 $, $ T = 30 $ min, and $ t = 120 $ min.  \nSubstitute: $ N(120) = 10 \\times 10^6 \\times 2^{4} = 10 \\times",
+      "intrinsic_audit": "The formula is correct: $ N(t) = N_0 \\times 2^{t/T} $. Substituting $ N_0 = 10 \\times 10^6 $, $ t = 120 $, $ T = 30 $, we get $ 2^{4} = 16 $. Thus, $ N(120) = 10 \\times 10^6 \\times 1",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 38.84375,
+        "B": 39.1875,
+        "C": 42.4375,
+        "D": 31.59375
+      },
+      "intrinsic_label_logits": {
+        "A": 41.15625,
+        "B": 37.09375,
+        "C": 42.46875,
+        "D": 31.328125
+      },
+      "verifier_label_logits": {
+        "A": 38.84375,
+        "B": 39.1875,
+        "C": 42.4375,
+        "D": 31.59375
+      }
+    },
+    {
+      "id": "confirm-biology_doubling-05",
+      "domain": "biology",
+      "template": "biology_doubling",
+      "answer": "C",
+      "direct_choice": "A",
+      "intrinsic_choice": "A",
+      "verifier_choice": "C",
+      "direct_correct": false,
+      "intrinsic_correct": false,
+      "verifier_correct": true,
+      "verifier_feedback": "use exponential multiplication rather than adding once per period",
+      "initial_scratchpad": "The culture doubles every 40 min. After 120 min, the number of doublings is $ \\frac{120}{40} = 3 $.  \nThe formula is $ N = N_0 \\times 2^t $, where $ N_0 = 3 \\times 10^6 $, $ t = 3 $.  \nSubstitute: $ N = 3 \\times 10^6 \\times",
+      "intrinsic_audit": "The key step is calculating the number of doublings: $ \\frac{120}{40} = 3 $. The formula $ N = N_0 \\times 2^t $ is correct. Substituting: $ N = 3 \\times 10^6 \\times 2^3 = 3 \\times 10^6 \\times 8 = 24 \\times 10^6 $. The proposed choice A",
+      "verifier_audit": "After 120 min, there are 3 doublings.  \n$ N = 3 \\times 10^6 \\times 2^3 = 3 \\times 10^6 \\times 8 = 24 \\times 10^6 $.  \nCorrected answer: C. 24 ×10^6 cells.",
+      "direct_label_logits": {
+        "A": 35.9375,
+        "B": 28.78125,
+        "C": 25.71875,
+        "D": 30.125
+      },
+      "intrinsic_label_logits": {
+        "A": 48.625,
+        "B": 29.265625,
+        "C": 29.796875,
+        "D": 29.515625
+      },
+      "verifier_label_logits": {
+        "A": 26.203125,
+        "B": 23.421875,
+        "C": 45.46875,
+        "D": 23.0625
+      }
+    },
+    {
+      "id": "confirm-biology_doubling-06",
+      "domain": "biology",
+      "template": "biology_doubling",
+      "answer": "D",
+      "direct_choice": "D",
+      "intrinsic_choice": "D",
+      "verifier_choice": "D",
+      "direct_correct": true,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": null,
+      "initial_scratchpad": "The formula is $ N = N_0 \\times 2^{t/T} $, where $ N_0 = 10 \\times 10^6 $, $ t = 150 $ min, and $ T = 30 $ min.  \nSubstitute: $ N = 10 \\times 10^6 \\times 2^{5} = 10 \\times 10^6 \\times 3",
+      "intrinsic_audit": "The formula uses $ t/T = 150/30 = 5 $, which is correct. The calculation $ 10 \\times 10^6 \\times 3 = 30 \\times 10^6 $ is accurate. The proposed answer D is $ 320 \\times 10^6 $, which is incorrect. The correct answer should be **30 × 10^6 cells**.",
+      "verifier_audit": null,
+      "direct_label_logits": {
+        "A": 37.5625,
+        "B": 34.65625,
+        "C": 32.125,
+        "D": 46.28125
+      },
+      "intrinsic_label_logits": {
+        "A": 41.1875,
+        "B": 35.125,
+        "C": 32.09375,
+        "D": 45.15625
+      },
+      "verifier_label_logits": {
+        "A": 37.5625,
+        "B": 34.65625,
+        "C": 32.125,
+        "D": 46.28125
+      }
+    },
+    {
+      "id": "confirm-biology_doubling-07",
+      "domain": "biology",
+      "template": "biology_doubling",
+      "answer": "D",
+      "direct_choice": "B",
+      "intrinsic_choice": "D",
+      "verifier_choice": "D",
+      "direct_correct": false,
+      "intrinsic_correct": true,
+      "verifier_correct": true,
+      "verifier_feedback": "recheck the number of doublings",
+      "initial_scratchpad": "The formula is $ N = N_0 \\times 2^{t/T} $, where $ N_0 = 8 \\times 10^6 $, $ t = 150 $ min, and $ T = 30 $ min.  \nSubstitute: $ N = 8 \\times 10^6 \\times 2^{5} = 8 \\times 10^6 \\times 32 = ",
+      "intrinsic_audit": "The formula is correct: $ N = N_0 \\times 2^{t/T} $.  \nSubstitute: $ N = 8 \\times 10^6 \\times 2^{5} = 8 \\times 10^6 \\times 32 = 256 \\times 10^6 $.  \nThe proposed choice B is incorrect.  \nThe correct answer is D.",
+      "verifier_audit": "The number of doublings is 150 / 30 = 5.  \nN = 8 × 10^6 × 2^5 = 8 × 10^6 × 32 = 256 × 10^6.  \nCorrected scratchpad: N = 256 × 10^6.  \nProposed choice: D.",
+      "direct_label_logits": {
+        "A": 32.25,
+        "B": 43.625,
+        "C": 30.203125,
+        "D": 37.0625
+      },
+      "intrinsic_label_logits": {
+        "A": 23.3125,
+        "B": 24.09375,
+        "C": 23.703125,
+        "D": 47.4375
+      },
+      "verifier_label_logits": {
+        "A": 23.765625,
+        "B": 24.25,
+        "C": 24.453125,
+        "D": 47.59375
+      }
+    }
+  ]
+}

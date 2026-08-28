@@ -75,6 +75,35 @@ raised it to 50.0%, but verifier feedback reached only 25.0%. Intrinsic audit
 also reduced Hardy–Weinberg accuracy from 87.5% to 62.5%. Those failures show
 why I store transition-level evidence instead of reporting only a mean.
 
+## Public balanced-label confirmation
+
+I ran the precommitted confirmation on a fresh 72-case cohort where every one
+of the nine templates contains two correct A, B, C, and D options. The protocol,
+generator, cases, manifest, tests, and evaluator revision were public and green
+in CI before the single GPU run.
+
+| Condition | Correct | Accuracy | Paired change vs. direct | 95% bootstrap CI | Wrong→right | Right→wrong | Exact McNemar p |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Direct | 45/72 | 62.5% | — | — | — | — | — |
+| Intrinsic audit | 54/72 | 75.0% | +12.5 points | +2.8 to +23.6 | 12 | 3 | 0.0352 |
+| Verifier-gated | 59/72 | 81.9% | +19.4 points | +11.1 to +29.2 | 14 | 0 | 0.00012 |
+
+Both conditions satisfy the frozen replication rule on the balanced cohort.
+The verifier-gated condition again had the stronger transition profile because
+it repaired 14 initially wrong cases while its gate left all initially correct
+direct cases untouched. Intrinsic audit still improved accuracy but reopened and
+regressed three correct direct cases.
+
+This is a replication of an inference-time scaffold on a controlled numerical
+benchmark, not evidence that Qwen acquired scientific knowledge. The verifier
+still uses an oracle-derived error category after a wrong direct answer. The
+important strengthened conclusion is narrower: the earlier effect was not
+explained solely by an imbalanced A/B/C/D label distribution.
+
+Run `python verify_balanced_confirmation.py` to validate the public protocol,
+exactly balanced cases, output hashes, transition counts, and inferential
+statistics.
+
 ## What this does and does not show
 
 - It shows a statistically detectable paired improvement on this frozen
