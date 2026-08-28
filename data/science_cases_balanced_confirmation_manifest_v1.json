@@ -1,0 +1,75 @@
+{
+  "dataset": "science-audit-balanced-confirmation-v1",
+  "protocol_sha256": "4f029148d769e5387091afe6a1da76b706e6b95c596530f20d2fcb42ddf7c49b",
+  "dataset_sha256": "d7e5a7aa0864123a3baf42fc926513ce0a6e715909cbb84a1806d24f55bcaace",
+  "seed": 280828,
+  "cases": 72,
+  "answer_counts": {
+    "A": 18,
+    "B": 18,
+    "C": 18,
+    "D": 18
+  },
+  "per_template_answer_counts": {
+    "chem_dilution": {
+      "A": 2,
+      "B": 2,
+      "C": 2,
+      "D": 2
+    },
+    "chem_half_life": {
+      "A": 2,
+      "B": 2,
+      "C": 2,
+      "D": 2
+    },
+    "chem_ideal_gas": {
+      "A": 2,
+      "B": 2,
+      "C": 2,
+      "D": 2
+    },
+    "physics_kinetic_energy": {
+      "A": 2,
+      "B": 2,
+      "C": 2,
+      "D": 2
+    },
+    "physics_ohms_law": {
+      "A": 2,
+      "B": 2,
+      "C": 2,
+      "D": 2
+    },
+    "physics_frequency": {
+      "A": 2,
+      "B": 2,
+      "C": 2,
+      "D": 2
+    },
+    "biology_hardy_weinberg": {
+      "A": 2,
+      "B": 2,
+      "C": 2,
+      "D": 2
+    },
+    "biology_michaelis_menten": {
+      "A": 2,
+      "B": 2,
+      "C": 2,
+      "D": 2
+    },
+    "biology_doubling": {
+      "A": 2,
+      "B": 2,
+      "C": 2,
+      "D": 2
+    }
+  },
+  "domains": [
+    "biology",
+    "chemistry",
+    "physics"
+  ],
+  "safety": "synthetic closed-form science calculations with exact numerical oracles; not experimental or clinical advice"
+}

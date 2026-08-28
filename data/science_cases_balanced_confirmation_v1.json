@@ -1,0 +1,1447 @@
+{
+  "schema_version": 1,
+  "seed": 280828,
+  "split": "confirm",
+  "cases": [
+    {
+      "id": "confirm-chem_dilution-00",
+      "split": "confirm",
+      "domain": "chemistry",
+      "template": "chem_dilution",
+      "question": "A 20 mM stock is diluted to make 10 mL at 10 mM. What stock volume is required?",
+      "options": {
+        "A": "5 mL",
+        "B": "100 mL",
+        "C": "5000 mL",
+        "D": "20 mL"
+      },
+      "answer": "A",
+      "error_by_choice": {
+        "A": "correct",
+        "B": "recheck the concentration division",
+        "C": "recheck the volume-unit conversion",
+        "D": "recheck the dilution ratio"
+      }
+    },
+    {
+      "id": "confirm-chem_dilution-01",
+      "split": "confirm",
+      "domain": "chemistry",
+      "template": "chem_dilution",
+      "question": "A 50 mM stock is diluted to make 50 mL at 1 mM. What stock volume is required?",
+      "options": {
+        "A": "1 mL",
+        "B": "1000 mL",
+        "C": "2500 mL",
+        "D": "50 mL"
+      },
+      "answer": "A",
+      "error_by_choice": {
+        "A": "correct",
+        "B": "recheck the volume-unit conversion",
+        "C": "recheck the dilution ratio",
+        "D": "recheck the concentration division"
+      }
+    },
+    {
+      "id": "confirm-chem_dilution-02",
+      "split": "confirm",
+      "domain": "chemistry",
+      "template": "chem_dilution",
+      "question": "A 40 mM stock is diluted to make 40 mL at 1 mM. What stock volume is required?",
+      "options": {
+        "A": "1000 mL",
+        "B": "1 mL",
+        "C": "40 mL",
+        "D": "1600 mL"
+      },
+      "answer": "B",
+      "error_by_choice": {
+        "A": "recheck the volume-unit conversion",
+        "B": "correct",
+        "C": "recheck the concentration division",
+        "D": "recheck the dilution ratio"
+      }
+    },
+    {
+      "id": "confirm-chem_dilution-03",
+      "split": "confirm",
+      "domain": "chemistry",
+      "template": "chem_dilution",
+      "question": "A 50 mM stock is diluted to make 20 mL at 1 mM. What stock volume is required?",
+      "options": {
+        "A": "20 mL",
+        "B": "0.4 mL",
+        "C": "400 mL",
+        "D": "1000 mL"
+      },
+      "answer": "B",
+      "error_by_choice": {
+        "A": "recheck the concentration division",
+        "B": "correct",
+        "C": "recheck the volume-unit conversion",
+        "D": "recheck the dilution ratio"
+      }
+    },
+    {
+      "id": "confirm-chem_dilution-04",
+      "split": "confirm",
+      "domain": "chemistry",
+      "template": "chem_dilution",
+      "question": "A 40 mM stock is diluted to make 25 mL at 4 mM. What stock volume is required?",
+      "options": {
+        "A": "100 mL",
+        "B": "2500 mL",
+        "C": "2.5 mL",
+        "D": "250 mL"
+      },
+      "answer": "C",
+      "error_by_choice": {
+        "A": "recheck the concentration division",
+        "B": "recheck the volume-unit conversion",
+        "C": "correct",
+        "D": "recheck the dilution ratio"
+      }
+    },
+    {
+      "id": "confirm-chem_dilution-05",
+      "split": "confirm",
+      "domain": "chemistry",
+      "template": "chem_dilution",
+      "question": "A 20 mM stock is diluted to make 10 mL at 10 mM. What stock volume is required?",
+      "options": {
+        "A": "20 mL",
+        "B": "100 mL",
+        "C": "5 mL",
+        "D": "5000 mL"
+      },
+      "answer": "C",
+      "error_by_choice": {
+        "A": "recheck the dilution ratio",
+        "B": "recheck the concentration division",
+        "C": "correct",
+        "D": "recheck the volume-unit conversion"
+      }
+    },
+    {
+      "id": "confirm-chem_dilution-06",
+      "split": "confirm",
+      "domain": "chemistry",
+      "template": "chem_dilution",
+      "question": "A 80 mM stock is diluted to make 50 mL at 4 mM. What stock volume is required?",
+      "options": {
+        "A": "200 mL",
+        "B": "1000 mL",
+        "C": "2500 mL",
+        "D": "2.5 mL"
+      },
+      "answer": "D",
+      "error_by_choice": {
+        "A": "recheck the concentration division",
+        "B": "recheck the dilution ratio",
+        "C": "recheck the volume-unit conversion",
+        "D": "correct"
+      }
+    },
+    {
+      "id": "confirm-chem_dilution-07",
+      "split": "confirm",
+      "domain": "chemistry",
+      "template": "chem_dilution",
+      "question": "A 40 mM stock is diluted to make 50 mL at 4 mM. What stock volume is required?",
+      "options": {
+        "A": "200 mL",
+        "B": "5000 mL",
+        "C": "500 mL",
+        "D": "5 mL"
+      },
+      "answer": "D",
+      "error_by_choice": {
+        "A": "recheck the concentration division",
+        "B": "recheck the volume-unit conversion",
+        "C": "recheck the dilution ratio",
+        "D": "correct"
+      }
+    },
+    {
+      "id": "confirm-chem_half_life-00",
+      "split": "confirm",
+      "domain": "chemistry",
+      "template": "chem_half_life",
+      "question": "A first-order species starts at 80 µM and has a 6 h half-life. What concentration remains after 12 h?",
+      "options": {
+        "A": "20 µM",
+        "B": "10 µM",
+        "C": "80 µM",
+        "D": "40 µM"
+      },
+      "answer": "A",
+      "error_by_choice": {
+        "A": "correct",
+        "B": "recheck the number of elapsed half-lives",
+        "C": "recheck how half-lives compound",
+        "D": "recheck exponential versus linear decay"
+      }
+    },
+    {
+      "id": "confirm-chem_half_life-01",
+      "split": "confirm",
+      "domain": "chemistry",
+      "template": "chem_half_life",
+      "question": "A first-order species starts at 96 µM and has a 6 h half-life. What concentration remains after 18 h?",
+      "options": {
+        "A": "12 µM",
+        "B": "6 µM",
+        "C": "32 µM",
+        "D": "144 µM"
+      },
+      "answer": "A",
+      "error_by_choice": {
+        "A": "correct",
+        "B": "recheck the number of elapsed half-lives",
+        "C": "recheck exponential versus linear decay",
+        "D": "recheck how half-lives compound"
+      }
+    },
+    {
+      "id": "confirm-chem_half_life-02",
+      "split": "confirm",
+      "domain": "chemistry",
+      "template": "chem_half_life",
+      "question": "A first-order species starts at 40 µM and has a 6 h half-life. What concentration remains after 18 h?",
+      "options": {
+        "A": "2.5 µM",
+        "B": "5 µM",
+        "C": "60 µM",
+        "D": "13.33 µM"
+      },
+      "answer": "B",
+      "error_by_choice": {
+        "A": "recheck the number of elapsed half-lives",
+        "B": "correct",
+        "C": "recheck how half-lives compound",
+        "D": "recheck exponential versus linear decay"
+      }
+    },
+    {
+      "id": "confirm-chem_half_life-03",
+      "split": "confirm",
+      "domain": "chemistry",
+      "template": "chem_half_life",
+      "question": "A first-order species starts at 160 µM and has a 2 h half-life. What concentration remains after 6 h?",
+      "options": {
+        "A": "53.33 µM",
+        "B": "20 µM",
+        "C": "10 µM",
+        "D": "240 µM"
+      },
+      "answer": "B",
+      "error_by_choice": {
+        "A": "recheck exponential versus linear decay",
+        "B": "correct",
+        "C": "recheck the number of elapsed half-lives",
+        "D": "recheck how half-lives compound"
+      }
+    },
+    {
+      "id": "confirm-chem_half_life-04",
+      "split": "confirm",
+      "domain": "chemistry",
+      "template": "chem_half_life",
+      "question": "A first-order species starts at 96 µM and has a 3 h half-life. What concentration remains after 6 h?",
+      "options": {
+        "A": "96 µM",
+        "B": "48 µM",
+        "C": "24 µM",
+        "D": "12 µM"
+      },
+      "answer": "C",
+      "error_by_choice": {
+        "A": "recheck how half-lives compound",
+        "B": "recheck exponential versus linear decay",
+        "C": "correct",
+        "D": "recheck the number of elapsed half-lives"
+      }
+    },
+    {
+      "id": "confirm-chem_half_life-05",
+      "split": "confirm",
+      "domain": "chemistry",
+      "template": "chem_half_life",
+      "question": "A first-order species starts at 160 µM and has a 3 h half-life. What concentration remains after 9 h?",
+      "options": {
+        "A": "10 µM",
+        "B": "53.33 µM",
+        "C": "20 µM",
+        "D": "240 µM"
+      },
+      "answer": "C",
+      "error_by_choice": {
+        "A": "recheck the number of elapsed half-lives",
+        "B": "recheck exponential versus linear decay",
+        "C": "correct",
+        "D": "recheck how half-lives compound"
+      }
+    },
+    {
+      "id": "confirm-chem_half_life-06",
+      "split": "confirm",
+      "domain": "chemistry",
+      "template": "chem_half_life",
+      "question": "A first-order species starts at 40 µM and has a 5 h half-life. What concentration remains after 20 h?",
+      "options": {
+        "A": "80 µM",
+        "B": "1.25 µM",
+        "C": "10 µM",
+        "D": "2.5 µM"
+      },
+      "answer": "D",
+      "error_by_choice": {
+        "A": "recheck how half-lives compound",
+        "B": "recheck the number of elapsed half-lives",
+        "C": "recheck exponential versus linear decay",
+        "D": "correct"
+      }
+    },
+    {
+      "id": "confirm-chem_half_life-07",
+      "split": "confirm",
+      "domain": "chemistry",
+      "template": "chem_half_life",
+      "question": "A first-order species starts at 64 µM and has a 6 h half-life. What concentration remains after 24 h?",
+      "options": {
+        "A": "128 µM",
+        "B": "16 µM",
+        "C": "2 µM",
+        "D": "4 µM"
+      },
+      "answer": "D",
+      "error_by_choice": {
+        "A": "recheck how half-lives compound",
+        "B": "recheck exponential versus linear decay",
+        "C": "recheck the number of elapsed half-lives",
+        "D": "correct"
+      }
+    },
+    {
+      "id": "confirm-chem_ideal_gas-00",
+      "split": "confirm",
+      "domain": "chemistry",
+      "template": "chem_ideal_gas",
+      "question": "An ideal gas has P=0.8 atm, V=5.0 L, and T=80 °C. Using R=0.082057 L·atm·mol⁻¹·K⁻¹, how many moles are present?",
+      "options": {
+        "A": "0.138 mol",
+        "B": "0.6093 mol",
+        "C": "115.9 mol",
+        "D": "48.75 mol"
+      },
+      "answer": "A",
+      "error_by_choice": {
+        "A": "correct",
+        "B": "convert Celsius to kelvin",
+        "C": "recheck the algebra in PV=nRT",
+        "D": "include absolute temperature"
+      }
+    },
+    {
+      "id": "confirm-chem_ideal_gas-01",
+      "split": "confirm",
+      "domain": "chemistry",
+      "template": "chem_ideal_gas",
+      "question": "An ideal gas has P=2.0 atm, V=3.0 L, and T=25 °C. Using R=0.082057 L·atm·mol⁻¹·K⁻¹, how many moles are present?",
+      "options": {
+        "A": "0.2452 mol",
+        "B": "146.8 mol",
+        "C": "2.925 mol",
+        "D": "73.12 mol"
+      },
+      "answer": "A",
+      "error_by_choice": {
+        "A": "correct",
+        "B": "recheck the algebra in PV=nRT",
+        "C": "convert Celsius to kelvin",
+        "D": "include absolute temperature"
+      }
+    },
+    {
+      "id": "confirm-chem_ideal_gas-02",
+      "split": "confirm",
+      "domain": "chemistry",
+      "template": "chem_ideal_gas",
+      "question": "An ideal gas has P=1.0 atm, V=2.0 L, and T=25 °C. Using R=0.082057 L·atm·mol⁻¹·K⁻¹, how many moles are present?",
+      "options": {
+        "A": "48.93 mol",
+        "B": "0.08175 mol",
+        "C": "24.37 mol",
+        "D": "0.9749 mol"
+      },
+      "answer": "B",
+      "error_by_choice": {
+        "A": "recheck the algebra in PV=nRT",
+        "B": "correct",
+        "C": "include absolute temperature",
+        "D": "convert Celsius to kelvin"
+      }
+    },
+    {
+      "id": "confirm-chem_ideal_gas-03",
+      "split": "confirm",
+      "domain": "chemistry",
+      "template": "chem_ideal_gas",
+      "question": "An ideal gas has P=0.8 atm, V=4.0 L, and T=80 °C. Using R=0.082057 L·atm·mol⁻¹·K⁻¹, how many moles are present?",
+      "options": {
+        "A": "92.73 mol",
+        "B": "0.1104 mol",
+        "C": "0.4875 mol",
+        "D": "39 mol"
+      },
+      "answer": "B",
+      "error_by_choice": {
+        "A": "recheck the algebra in PV=nRT",
+        "B": "correct",
+        "C": "convert Celsius to kelvin",
+        "D": "include absolute temperature"
+      }
+    },
+    {
+      "id": "confirm-chem_ideal_gas-04",
+      "split": "confirm",
+      "domain": "chemistry",
+      "template": "chem_ideal_gas",
+      "question": "An ideal gas has P=1.5 atm, V=3.0 L, and T=25 °C. Using R=0.082057 L·atm·mol⁻¹·K⁻¹, how many moles are present?",
+      "options": {
+        "A": "2.194 mol",
+        "B": "54.84 mol",
+        "C": "0.1839 mol",
+        "D": "110.1 mol"
+      },
+      "answer": "C",
+      "error_by_choice": {
+        "A": "convert Celsius to kelvin",
+        "B": "include absolute temperature",
+        "C": "correct",
+        "D": "recheck the algebra in PV=nRT"
+      }
+    },
+    {
+      "id": "confirm-chem_ideal_gas-05",
+      "split": "confirm",
+      "domain": "chemistry",
+      "template": "chem_ideal_gas",
+      "question": "An ideal gas has P=1.2 atm, V=4.0 L, and T=80 °C. Using R=0.082057 L·atm·mol⁻¹·K⁻¹, how many moles are present?",
+      "options": {
+        "A": "58.5 mol",
+        "B": "0.7312 mol",
+        "C": "0.1656 mol",
+        "D": "139.1 mol"
+      },
+      "answer": "C",
+      "error_by_choice": {
+        "A": "include absolute temperature",
+        "B": "convert Celsius to kelvin",
+        "C": "correct",
+        "D": "recheck the algebra in PV=nRT"
+      }
+    },
+    {
+      "id": "confirm-chem_ideal_gas-06",
+      "split": "confirm",
+      "domain": "chemistry",
+      "template": "chem_ideal_gas",
+      "question": "An ideal gas has P=1.5 atm, V=1.5 L, and T=40 °C. Using R=0.082057 L·atm·mol⁻¹·K⁻¹, how many moles are present?",
+      "options": {
+        "A": "0.6855 mol",
+        "B": "27.42 mol",
+        "C": "57.82 mol",
+        "D": "0.08756 mol"
+      },
+      "answer": "D",
+      "error_by_choice": {
+        "A": "convert Celsius to kelvin",
+        "B": "include absolute temperature",
+        "C": "recheck the algebra in PV=nRT",
+        "D": "correct"
+      }
+    },
+    {
+      "id": "confirm-chem_ideal_gas-07",
+      "split": "confirm",
+      "domain": "chemistry",
+      "template": "chem_ideal_gas",
+      "question": "An ideal gas has P=1.2 atm, V=2.0 L, and T=80 °C. Using R=0.082057 L·atm·mol⁻¹·K⁻¹, how many moles are present?",
+      "options": {
+        "A": "0.3656 mol",
+        "B": "29.25 mol",
+        "C": "69.55 mol",
+        "D": "0.08282 mol"
+      },
+      "answer": "D",
+      "error_by_choice": {
+        "A": "convert Celsius to kelvin",
+        "B": "include absolute temperature",
+        "C": "recheck the algebra in PV=nRT",
+        "D": "correct"
+      }
+    },
+    {
+      "id": "confirm-physics_kinetic_energy-00",
+      "split": "confirm",
+      "domain": "physics",
+      "template": "physics_kinetic_energy",
+      "question": "A 50 g object moves at 10 m/s. What is its kinetic energy?",
+      "options": {
+        "A": "2.5 J",
+        "B": "2500 J",
+        "C": "5 J",
+        "D": "0.25 J"
+      },
+      "answer": "A",
+      "error_by_choice": {
+        "A": "correct",
+        "B": "convert grams to kilograms",
+        "C": "include the one-half factor",
+        "D": "square the velocity"
+      }
+    },
+    {
+      "id": "confirm-physics_kinetic_energy-01",
+      "split": "confirm",
+      "domain": "physics",
+      "template": "physics_kinetic_energy",
+      "question": "A 80 g object moves at 10 m/s. What is its kinetic energy?",
+      "options": {
+        "A": "4 J",
+        "B": "0.4 J",
+        "C": "8 J",
+        "D": "4000 J"
+      },
+      "answer": "A",
+      "error_by_choice": {
+        "A": "correct",
+        "B": "square the velocity",
+        "C": "include the one-half factor",
+        "D": "convert grams to kilograms"
+      }
+    },
+    {
+      "id": "confirm-physics_kinetic_energy-02",
+      "split": "confirm",
+      "domain": "physics",
+      "template": "physics_kinetic_energy",
+      "question": "A 50 g object moves at 6 m/s. What is its kinetic energy?",
+      "options": {
+        "A": "900 J",
+        "B": "0.9 J",
+        "C": "1.8 J",
+        "D": "0.15 J"
+      },
+      "answer": "B",
+      "error_by_choice": {
+        "A": "convert grams to kilograms",
+        "B": "correct",
+        "C": "include the one-half factor",
+        "D": "square the velocity"
+      }
+    },
+    {
+      "id": "confirm-physics_kinetic_energy-03",
+      "split": "confirm",
+      "domain": "physics",
+      "template": "physics_kinetic_energy",
+      "question": "A 250 g object moves at 10 m/s. What is its kinetic energy?",
+      "options": {
+        "A": "1.25 J",
+        "B": "12.5 J",
+        "C": "1.250e+04 J",
+        "D": "25 J"
+      },
+      "answer": "B",
+      "error_by_choice": {
+        "A": "square the velocity",
+        "B": "correct",
+        "C": "convert grams to kilograms",
+        "D": "include the one-half factor"
+      }
+    },
+    {
+      "id": "confirm-physics_kinetic_energy-04",
+      "split": "confirm",
+      "domain": "physics",
+      "template": "physics_kinetic_energy",
+      "question": "A 50 g object moves at 8 m/s. What is its kinetic energy?",
+      "options": {
+        "A": "1600 J",
+        "B": "0.2 J",
+        "C": "1.6 J",
+        "D": "3.2 J"
+      },
+      "answer": "C",
+      "error_by_choice": {
+        "A": "convert grams to kilograms",
+        "B": "square the velocity",
+        "C": "correct",
+        "D": "include the one-half factor"
+      }
+    },
+    {
+      "id": "confirm-physics_kinetic_energy-05",
+      "split": "confirm",
+      "domain": "physics",
+      "template": "physics_kinetic_energy",
+      "question": "A 250 g object moves at 6 m/s. What is its kinetic energy?",
+      "options": {
+        "A": "0.75 J",
+        "B": "9 J",
+        "C": "4.5 J",
+        "D": "4500 J"
+      },
+      "answer": "C",
+      "error_by_choice": {
+        "A": "square the velocity",
+        "B": "include the one-half factor",
+        "C": "correct",
+        "D": "convert grams to kilograms"
+      }
+    },
+    {
+      "id": "confirm-physics_kinetic_energy-06",
+      "split": "confirm",
+      "domain": "physics",
+      "template": "physics_kinetic_energy",
+      "question": "A 120 g object moves at 8 m/s. What is its kinetic energy?",
+      "options": {
+        "A": "3840 J",
+        "B": "0.48 J",
+        "C": "7.68 J",
+        "D": "3.84 J"
+      },
+      "answer": "D",
+      "error_by_choice": {
+        "A": "convert grams to kilograms",
+        "B": "square the velocity",
+        "C": "include the one-half factor",
+        "D": "correct"
+      }
+    },
+    {
+      "id": "confirm-physics_kinetic_energy-07",
+      "split": "confirm",
+      "domain": "physics",
+      "template": "physics_kinetic_energy",
+      "question": "A 120 g object moves at 3 m/s. What is its kinetic energy?",
+      "options": {
+        "A": "540 J",
+        "B": "0.18 J",
+        "C": "1.08 J",
+        "D": "0.54 J"
+      },
+      "answer": "D",
+      "error_by_choice": {
+        "A": "convert grams to kilograms",
+        "B": "square the velocity",
+        "C": "include the one-half factor",
+        "D": "correct"
+      }
+    },
+    {
+      "id": "confirm-physics_ohms_law-00",
+      "split": "confirm",
+      "domain": "physics",
+      "template": "physics_ohms_law",
+      "question": "A 3 V source is applied across a 220 Ω resistor. What current flows?",
+      "options": {
+        "A": "13.64 mA",
+        "B": "0.01364 mA",
+        "C": "73.33 mA",
+        "D": "660 mA"
+      },
+      "answer": "A",
+      "error_by_choice": {
+        "A": "correct",
+        "B": "convert amperes to milliamperes",
+        "C": "recheck which quantity is divided",
+        "D": "recheck Ohm's-law division"
+      }
+    },
+    {
+      "id": "confirm-physics_ohms_law-01",
+      "split": "confirm",
+      "domain": "physics",
+      "template": "physics_ohms_law",
+      "question": "A 12 V source is applied across a 680 Ω resistor. What current flows?",
+      "options": {
+        "A": "17.65 mA",
+        "B": "56.67 mA",
+        "C": "8160 mA",
+        "D": "0.01765 mA"
+      },
+      "answer": "A",
+      "error_by_choice": {
+        "A": "correct",
+        "B": "recheck which quantity is divided",
+        "C": "recheck Ohm's-law division",
+        "D": "convert amperes to milliamperes"
+      }
+    },
+    {
+      "id": "confirm-physics_ohms_law-02",
+      "split": "confirm",
+      "domain": "physics",
+      "template": "physics_ohms_law",
+      "question": "A 5 V source is applied across a 150 Ω resistor. What current flows?",
+      "options": {
+        "A": "30 mA",
+        "B": "33.33 mA",
+        "C": "750 mA",
+        "D": "0.03333 mA"
+      },
+      "answer": "B",
+      "error_by_choice": {
+        "A": "recheck which quantity is divided",
+        "B": "correct",
+        "C": "recheck Ohm's-law division",
+        "D": "convert amperes to milliamperes"
+      }
+    },
+    {
+      "id": "confirm-physics_ohms_law-03",
+      "split": "confirm",
+      "domain": "physics",
+      "template": "physics_ohms_law",
+      "question": "A 12 V source is applied across a 470 Ω resistor. What current flows?",
+      "options": {
+        "A": "39.17 mA",
+        "B": "25.53 mA",
+        "C": "0.02553 mA",
+        "D": "5640 mA"
+      },
+      "answer": "B",
+      "error_by_choice": {
+        "A": "recheck which quantity is divided",
+        "B": "correct",
+        "C": "convert amperes to milliamperes",
+        "D": "recheck Ohm's-law division"
+      }
+    },
+    {
+      "id": "confirm-physics_ohms_law-04",
+      "split": "confirm",
+      "domain": "physics",
+      "template": "physics_ohms_law",
+      "question": "A 6 V source is applied across a 680 Ω resistor. What current flows?",
+      "options": {
+        "A": "8.824e-03 mA",
+        "B": "4080 mA",
+        "C": "8.824 mA",
+        "D": "113.3 mA"
+      },
+      "answer": "C",
+      "error_by_choice": {
+        "A": "convert amperes to milliamperes",
+        "B": "recheck Ohm's-law division",
+        "C": "correct",
+        "D": "recheck which quantity is divided"
+      }
+    },
+    {
+      "id": "confirm-physics_ohms_law-05",
+      "split": "confirm",
+      "domain": "physics",
+      "template": "physics_ohms_law",
+      "question": "A 5 V source is applied across a 330 Ω resistor. What current flows?",
+      "options": {
+        "A": "0.01515 mA",
+        "B": "1650 mA",
+        "C": "15.15 mA",
+        "D": "66 mA"
+      },
+      "answer": "C",
+      "error_by_choice": {
+        "A": "convert amperes to milliamperes",
+        "B": "recheck Ohm's-law division",
+        "C": "correct",
+        "D": "recheck which quantity is divided"
+      }
+    },
+    {
+      "id": "confirm-physics_ohms_law-06",
+      "split": "confirm",
+      "domain": "physics",
+      "template": "physics_ohms_law",
+      "question": "A 15 V source is applied across a 330 Ω resistor. What current flows?",
+      "options": {
+        "A": "0.04545 mA",
+        "B": "22 mA",
+        "C": "4950 mA",
+        "D": "45.45 mA"
+      },
+      "answer": "D",
+      "error_by_choice": {
+        "A": "convert amperes to milliamperes",
+        "B": "recheck which quantity is divided",
+        "C": "recheck Ohm's-law division",
+        "D": "correct"
+      }
+    },
+    {
+      "id": "confirm-physics_ohms_law-07",
+      "split": "confirm",
+      "domain": "physics",
+      "template": "physics_ohms_law",
+      "question": "A 9 V source is applied across a 470 Ω resistor. What current flows?",
+      "options": {
+        "A": "4230 mA",
+        "B": "0.01915 mA",
+        "C": "52.22 mA",
+        "D": "19.15 mA"
+      },
+      "answer": "D",
+      "error_by_choice": {
+        "A": "recheck Ohm's-law division",
+        "B": "convert amperes to milliamperes",
+        "C": "recheck which quantity is divided",
+        "D": "correct"
+      }
+    },
+    {
+      "id": "confirm-physics_frequency-00",
+      "split": "confirm",
+      "domain": "physics",
+      "template": "physics_frequency",
+      "question": "Light has wavelength 500 nm. Using c=3.00×10^8 m/s, what is its frequency?",
+      "options": {
+        "A": "600 THz",
+        "B": "0.6 THz",
+        "C": "1.667e-03 THz",
+        "D": "6.000e+05 THz"
+      },
+      "answer": "A",
+      "error_by_choice": {
+        "A": "correct",
+        "B": "recheck the metric-prefix conversion",
+        "C": "recheck frequency versus wavelength",
+        "D": "convert nanometres and hertz consistently"
+      }
+    },
+    {
+      "id": "confirm-physics_frequency-01",
+      "split": "confirm",
+      "domain": "physics",
+      "template": "physics_frequency",
+      "question": "Light has wavelength 400 nm. Using c=3.00×10^8 m/s, what is its frequency?",
+      "options": {
+        "A": "750 THz",
+        "B": "1.333e-03 THz",
+        "C": "7.500e+05 THz",
+        "D": "0.75 THz"
+      },
+      "answer": "A",
+      "error_by_choice": {
+        "A": "correct",
+        "B": "recheck frequency versus wavelength",
+        "C": "convert nanometres and hertz consistently",
+        "D": "recheck the metric-prefix conversion"
+      }
+    },
+    {
+      "id": "confirm-physics_frequency-02",
+      "split": "confirm",
+      "domain": "physics",
+      "template": "physics_frequency",
+      "question": "Light has wavelength 600 nm. Using c=3.00×10^8 m/s, what is its frequency?",
+      "options": {
+        "A": "5.000e+05 THz",
+        "B": "500 THz",
+        "C": "2.000e-03 THz",
+        "D": "0.5 THz"
+      },
+      "answer": "B",
+      "error_by_choice": {
+        "A": "convert nanometres and hertz consistently",
+        "B": "correct",
+        "C": "recheck frequency versus wavelength",
+        "D": "recheck the metric-prefix conversion"
+      }
+    },
+    {
+      "id": "confirm-physics_frequency-03",
+      "split": "confirm",
+      "domain": "physics",
+      "template": "physics_frequency",
+      "question": "Light has wavelength 500 nm. Using c=3.00×10^8 m/s, what is its frequency?",
+      "options": {
+        "A": "0.6 THz",
+        "B": "600 THz",
+        "C": "6.000e+05 THz",
+        "D": "1.667e-03 THz"
+      },
+      "answer": "B",
+      "error_by_choice": {
+        "A": "recheck the metric-prefix conversion",
+        "B": "correct",
+        "C": "convert nanometres and hertz consistently",
+        "D": "recheck frequency versus wavelength"
+      }
+    },
+    {
+      "id": "confirm-physics_frequency-04",
+      "split": "confirm",
+      "domain": "physics",
+      "template": "physics_frequency",
+      "question": "Light has wavelength 700 nm. Using c=3.00×10^8 m/s, what is its frequency?",
+      "options": {
+        "A": "0.4286 THz",
+        "B": "2.333e-03 THz",
+        "C": "428.6 THz",
+        "D": "4.286e+05 THz"
+      },
+      "answer": "C",
+      "error_by_choice": {
+        "A": "recheck the metric-prefix conversion",
+        "B": "recheck frequency versus wavelength",
+        "C": "correct",
+        "D": "convert nanometres and hertz consistently"
+      }
+    },
+    {
+      "id": "confirm-physics_frequency-05",
+      "split": "confirm",
+      "domain": "physics",
+      "template": "physics_frequency",
+      "question": "Light has wavelength 700 nm. Using c=3.00×10^8 m/s, what is its frequency?",
+      "options": {
+        "A": "4.286e+05 THz",
+        "B": "0.4286 THz",
+        "C": "428.6 THz",
+        "D": "2.333e-03 THz"
+      },
+      "answer": "C",
+      "error_by_choice": {
+        "A": "convert nanometres and hertz consistently",
+        "B": "recheck the metric-prefix conversion",
+        "C": "correct",
+        "D": "recheck frequency versus wavelength"
+      }
+    },
+    {
+      "id": "confirm-physics_frequency-06",
+      "split": "confirm",
+      "domain": "physics",
+      "template": "physics_frequency",
+      "question": "Light has wavelength 400 nm. Using c=3.00×10^8 m/s, what is its frequency?",
+      "options": {
+        "A": "1.333e-03 THz",
+        "B": "7.500e+05 THz",
+        "C": "0.75 THz",
+        "D": "750 THz"
+      },
+      "answer": "D",
+      "error_by_choice": {
+        "A": "recheck frequency versus wavelength",
+        "B": "convert nanometres and hertz consistently",
+        "C": "recheck the metric-prefix conversion",
+        "D": "correct"
+      }
+    },
+    {
+      "id": "confirm-physics_frequency-07",
+      "split": "confirm",
+      "domain": "physics",
+      "template": "physics_frequency",
+      "question": "Light has wavelength 700 nm. Using c=3.00×10^8 m/s, what is its frequency?",
+      "options": {
+        "A": "2.333e-03 THz",
+        "B": "4.286e+05 THz",
+        "C": "0.4286 THz",
+        "D": "428.6 THz"
+      },
+      "answer": "D",
+      "error_by_choice": {
+        "A": "recheck frequency versus wavelength",
+        "B": "convert nanometres and hertz consistently",
+        "C": "recheck the metric-prefix conversion",
+        "D": "correct"
+      }
+    },
+    {
+      "id": "confirm-biology_hardy_weinberg-00",
+      "split": "confirm",
+      "domain": "biology",
+      "template": "biology_hardy_weinberg",
+      "question": "In Hardy–Weinberg equilibrium, 36% of a population has a recessive phenotype (q²). What percentage are heterozygous carriers (2pq)?",
+      "options": {
+        "A": "48 %",
+        "B": "36 %",
+        "C": "16 %",
+        "D": "60 %"
+      },
+      "answer": "A",
+      "error_by_choice": {
+        "A": "correct",
+        "B": "do not reuse the recessive phenotype frequency q²",
+        "C": "compute heterozygotes rather than homozygous dominant p²",
+        "D": "compute 2pq rather than the allele frequency q"
+      }
+    },
+    {
+      "id": "confirm-biology_hardy_weinberg-01",
+      "split": "confirm",
+      "domain": "biology",
+      "template": "biology_hardy_weinberg",
+      "question": "In Hardy–Weinberg equilibrium, 36% of a population has a recessive phenotype (q²). What percentage are heterozygous carriers (2pq)?",
+      "options": {
+        "A": "48 %",
+        "B": "16 %",
+        "C": "60 %",
+        "D": "36 %"
+      },
+      "answer": "A",
+      "error_by_choice": {
+        "A": "correct",
+        "B": "compute heterozygotes rather than homozygous dominant p²",
+        "C": "compute 2pq rather than the allele frequency q",
+        "D": "do not reuse the recessive phenotype frequency q²"
+      }
+    },
+    {
+      "id": "confirm-biology_hardy_weinberg-02",
+      "split": "confirm",
+      "domain": "biology",
+      "template": "biology_hardy_weinberg",
+      "question": "In Hardy–Weinberg equilibrium, 36% of a population has a recessive phenotype (q²). What percentage are heterozygous carriers (2pq)?",
+      "options": {
+        "A": "60 %",
+        "B": "48 %",
+        "C": "16 %",
+        "D": "36 %"
+      },
+      "answer": "B",
+      "error_by_choice": {
+        "A": "compute 2pq rather than the allele frequency q",
+        "B": "correct",
+        "C": "compute heterozygotes rather than homozygous dominant p²",
+        "D": "do not reuse the recessive phenotype frequency q²"
+      }
+    },
+    {
+      "id": "confirm-biology_hardy_weinberg-03",
+      "split": "confirm",
+      "domain": "biology",
+      "template": "biology_hardy_weinberg",
+      "question": "In Hardy–Weinberg equilibrium, 4% of a population has a recessive phenotype (q²). What percentage are heterozygous carriers (2pq)?",
+      "options": {
+        "A": "20 %",
+        "B": "32 %",
+        "C": "64 %",
+        "D": "4 %"
+      },
+      "answer": "B",
+      "error_by_choice": {
+        "A": "compute 2pq rather than the allele frequency q",
+        "B": "correct",
+        "C": "compute heterozygotes rather than homozygous dominant p²",
+        "D": "do not reuse the recessive phenotype frequency q²"
+      }
+    },
+    {
+      "id": "confirm-biology_hardy_weinberg-04",
+      "split": "confirm",
+      "domain": "biology",
+      "template": "biology_hardy_weinberg",
+      "question": "In Hardy–Weinberg equilibrium, 4% of a population has a recessive phenotype (q²). What percentage are heterozygous carriers (2pq)?",
+      "options": {
+        "A": "20 %",
+        "B": "4 %",
+        "C": "32 %",
+        "D": "64 %"
+      },
+      "answer": "C",
+      "error_by_choice": {
+        "A": "compute 2pq rather than the allele frequency q",
+        "B": "do not reuse the recessive phenotype frequency q²",
+        "C": "correct",
+        "D": "compute heterozygotes rather than homozygous dominant p²"
+      }
+    },
+    {
+      "id": "confirm-biology_hardy_weinberg-05",
+      "split": "confirm",
+      "domain": "biology",
+      "template": "biology_hardy_weinberg",
+      "question": "In Hardy–Weinberg equilibrium, 4% of a population has a recessive phenotype (q²). What percentage are heterozygous carriers (2pq)?",
+      "options": {
+        "A": "4 %",
+        "B": "64 %",
+        "C": "32 %",
+        "D": "20 %"
+      },
+      "answer": "C",
+      "error_by_choice": {
+        "A": "do not reuse the recessive phenotype frequency q²",
+        "B": "compute heterozygotes rather than homozygous dominant p²",
+        "C": "correct",
+        "D": "compute 2pq rather than the allele frequency q"
+      }
+    },
+    {
+      "id": "confirm-biology_hardy_weinberg-06",
+      "split": "confirm",
+      "domain": "biology",
+      "template": "biology_hardy_weinberg",
+      "question": "In Hardy–Weinberg equilibrium, 9% of a population has a recessive phenotype (q²). What percentage are heterozygous carriers (2pq)?",
+      "options": {
+        "A": "30 %",
+        "B": "49 %",
+        "C": "9 %",
+        "D": "42 %"
+      },
+      "answer": "D",
+      "error_by_choice": {
+        "A": "compute 2pq rather than the allele frequency q",
+        "B": "compute heterozygotes rather than homozygous dominant p²",
+        "C": "do not reuse the recessive phenotype frequency q²",
+        "D": "correct"
+      }
+    },
+    {
+      "id": "confirm-biology_hardy_weinberg-07",
+      "split": "confirm",
+      "domain": "biology",
+      "template": "biology_hardy_weinberg",
+      "question": "In Hardy–Weinberg equilibrium, 9% of a population has a recessive phenotype (q²). What percentage are heterozygous carriers (2pq)?",
+      "options": {
+        "A": "49 %",
+        "B": "9 %",
+        "C": "30 %",
+        "D": "42 %"
+      },
+      "answer": "D",
+      "error_by_choice": {
+        "A": "compute heterozygotes rather than homozygous dominant p²",
+        "B": "do not reuse the recessive phenotype frequency q²",
+        "C": "compute 2pq rather than the allele frequency q",
+        "D": "correct"
+      }
+    },
+    {
+      "id": "confirm-biology_michaelis_menten-00",
+      "split": "confirm",
+      "domain": "biology",
+      "template": "biology_michaelis_menten",
+      "question": "An enzyme has Vmax=150 µmol/min and Km=10 mM. At [S]=8 mM, what is v under Michaelis–Menten kinetics?",
+      "options": {
+        "A": "66.67 µmol/min",
+        "B": "83.33 µmol/min",
+        "C": "120 µmol/min",
+        "D": "8.333 µmol/min"
+      },
+      "answer": "A",
+      "error_by_choice": {
+        "A": "correct",
+        "B": "place substrate, not Km, in the numerator",
+        "C": "include Km+[S] in the denominator",
+        "D": "include the substrate factor"
+      }
+    },
+    {
+      "id": "confirm-biology_michaelis_menten-01",
+      "split": "confirm",
+      "domain": "biology",
+      "template": "biology_michaelis_menten",
+      "question": "An enzyme has Vmax=80 µmol/min and Km=5 mM. At [S]=10 mM, what is v under Michaelis–Menten kinetics?",
+      "options": {
+        "A": "53.33 µmol/min",
+        "B": "26.67 µmol/min",
+        "C": "160 µmol/min",
+        "D": "5.333 µmol/min"
+      },
+      "answer": "A",
+      "error_by_choice": {
+        "A": "correct",
+        "B": "place substrate, not Km, in the numerator",
+        "C": "include Km+[S] in the denominator",
+        "D": "include the substrate factor"
+      }
+    },
+    {
+      "id": "confirm-biology_michaelis_menten-02",
+      "split": "confirm",
+      "domain": "biology",
+      "template": "biology_michaelis_menten",
+      "question": "An enzyme has Vmax=120 µmol/min and Km=4 mM. At [S]=10 mM, what is v under Michaelis–Menten kinetics?",
+      "options": {
+        "A": "8.571 µmol/min",
+        "B": "85.71 µmol/min",
+        "C": "300 µmol/min",
+        "D": "34.29 µmol/min"
+      },
+      "answer": "B",
+      "error_by_choice": {
+        "A": "include the substrate factor",
+        "B": "correct",
+        "C": "include Km+[S] in the denominator",
+        "D": "place substrate, not Km, in the numerator"
+      }
+    },
+    {
+      "id": "confirm-biology_michaelis_menten-03",
+      "split": "confirm",
+      "domain": "biology",
+      "template": "biology_michaelis_menten",
+      "question": "An enzyme has Vmax=100 µmol/min and Km=4 mM. At [S]=10 mM, what is v under Michaelis–Menten kinetics?",
+      "options": {
+        "A": "250 µmol/min",
+        "B": "71.43 µmol/min",
+        "C": "28.57 µmol/min",
+        "D": "7.143 µmol/min"
+      },
+      "answer": "B",
+      "error_by_choice": {
+        "A": "include Km+[S] in the denominator",
+        "B": "correct",
+        "C": "place substrate, not Km, in the numerator",
+        "D": "include the substrate factor"
+      }
+    },
+    {
+      "id": "confirm-biology_michaelis_menten-04",
+      "split": "confirm",
+      "domain": "biology",
+      "template": "biology_michaelis_menten",
+      "question": "An enzyme has Vmax=60 µmol/min and Km=8 mM. At [S]=16 mM, what is v under Michaelis–Menten kinetics?",
+      "options": {
+        "A": "120 µmol/min",
+        "B": "2.5 µmol/min",
+        "C": "40 µmol/min",
+        "D": "20 µmol/min"
+      },
+      "answer": "C",
+      "error_by_choice": {
+        "A": "include Km+[S] in the denominator",
+        "B": "include the substrate factor",
+        "C": "correct",
+        "D": "place substrate, not Km, in the numerator"
+      }
+    },
+    {
+      "id": "confirm-biology_michaelis_menten-05",
+      "split": "confirm",
+      "domain": "biology",
+      "template": "biology_michaelis_menten",
+      "question": "An enzyme has Vmax=80 µmol/min and Km=2 mM. At [S]=16 mM, what is v under Michaelis–Menten kinetics?",
+      "options": {
+        "A": "640 µmol/min",
+        "B": "8.889 µmol/min",
+        "C": "71.11 µmol/min",
+        "D": "4.444 µmol/min"
+      },
+      "answer": "C",
+      "error_by_choice": {
+        "A": "include Km+[S] in the denominator",
+        "B": "place substrate, not Km, in the numerator",
+        "C": "correct",
+        "D": "include the substrate factor"
+      }
+    },
+    {
+      "id": "confirm-biology_michaelis_menten-06",
+      "split": "confirm",
+      "domain": "biology",
+      "template": "biology_michaelis_menten",
+      "question": "An enzyme has Vmax=150 µmol/min and Km=10 mM. At [S]=2 mM, what is v under Michaelis–Menten kinetics?",
+      "options": {
+        "A": "30 µmol/min",
+        "B": "125 µmol/min",
+        "C": "12.5 µmol/min",
+        "D": "25 µmol/min"
+      },
+      "answer": "D",
+      "error_by_choice": {
+        "A": "include Km+[S] in the denominator",
+        "B": "place substrate, not Km, in the numerator",
+        "C": "include the substrate factor",
+        "D": "correct"
+      }
+    },
+    {
+      "id": "confirm-biology_michaelis_menten-07",
+      "split": "confirm",
+      "domain": "biology",
+      "template": "biology_michaelis_menten",
+      "question": "An enzyme has Vmax=150 µmol/min and Km=4 mM. At [S]=8 mM, what is v under Michaelis–Menten kinetics?",
+      "options": {
+        "A": "12.5 µmol/min",
+        "B": "300 µmol/min",
+        "C": "50 µmol/min",
+        "D": "100 µmol/min"
+      },
+      "answer": "D",
+      "error_by_choice": {
+        "A": "include the substrate factor",
+        "B": "include Km+[S] in the denominator",
+        "C": "place substrate, not Km, in the numerator",
+        "D": "correct"
+      }
+    },
+    {
+      "id": "confirm-biology_doubling-00",
+      "split": "confirm",
+      "domain": "biology",
+      "template": "biology_doubling",
+      "question": "A culture starts with 3×10^6 cells and doubles every 20 min. How many cells are present after 100 min?",
+      "options": {
+        "A": "96 ×10^6 cells",
+        "B": "8 ×10^6 cells",
+        "C": "243 ×10^6 cells",
+        "D": "48 ×10^6 cells"
+      },
+      "answer": "A",
+      "error_by_choice": {
+        "A": "correct",
+        "B": "use exponential multiplication rather than adding once per period",
+        "C": "use a base of two for doubling",
+        "D": "recheck the number of doublings"
+      }
+    },
+    {
+      "id": "confirm-biology_doubling-01",
+      "split": "confirm",
+      "domain": "biology",
+      "template": "biology_doubling",
+      "question": "A culture starts with 4×10^6 cells and doubles every 20 min. How many cells are present after 100 min?",
+      "options": {
+        "A": "128 ×10^6 cells",
+        "B": "64 ×10^6 cells",
+        "C": "1024 ×10^6 cells",
+        "D": "9 ×10^6 cells"
+      },
+      "answer": "A",
+      "error_by_choice": {
+        "A": "correct",
+        "B": "recheck the number of doublings",
+        "C": "use a base of two for doubling",
+        "D": "use exponential multiplication rather than adding once per period"
+      }
+    },
+    {
+      "id": "confirm-biology_doubling-02",
+      "split": "confirm",
+      "domain": "biology",
+      "template": "biology_doubling",
+      "question": "A culture starts with 4×10^6 cells and doubles every 30 min. How many cells are present after 90 min?",
+      "options": {
+        "A": "64 ×10^6 cells",
+        "B": "32 ×10^6 cells",
+        "C": "16 ×10^6 cells",
+        "D": "7 ×10^6 cells"
+      },
+      "answer": "B",
+      "error_by_choice": {
+        "A": "use a base of two for doubling",
+        "B": "correct",
+        "C": "recheck the number of doublings",
+        "D": "use exponential multiplication rather than adding once per period"
+      }
+    },
+    {
+      "id": "confirm-biology_doubling-03",
+      "split": "confirm",
+      "domain": "biology",
+      "template": "biology_doubling",
+      "question": "A culture starts with 5×10^6 cells and doubles every 60 min. How many cells are present after 300 min?",
+      "options": {
+        "A": "10 ×10^6 cells",
+        "B": "160 ×10^6 cells",
+        "C": "3125 ×10^6 cells",
+        "D": "80 ×10^6 cells"
+      },
+      "answer": "B",
+      "error_by_choice": {
+        "A": "use exponential multiplication rather than adding once per period",
+        "B": "correct",
+        "C": "use a base of two for doubling",
+        "D": "recheck the number of doublings"
+      }
+    },
+    {
+      "id": "confirm-biology_doubling-04",
+      "split": "confirm",
+      "domain": "biology",
+      "template": "biology_doubling",
+      "question": "A culture starts with 10×10^6 cells and doubles every 30 min. How many cells are present after 120 min?",
+      "options": {
+        "A": "80 ×10^6 cells",
+        "B": "1.000e+04 ×10^6 cells",
+        "C": "160 ×10^6 cells",
+        "D": "14 ×10^6 cells"
+      },
+      "answer": "C",
+      "error_by_choice": {
+        "A": "recheck the number of doublings",
+        "B": "use a base of two for doubling",
+        "C": "correct",
+        "D": "use exponential multiplication rather than adding once per period"
+      }
+    },
+    {
+      "id": "confirm-biology_doubling-05",
+      "split": "confirm",
+      "domain": "biology",
+      "template": "biology_doubling",
+      "question": "A culture starts with 3×10^6 cells and doubles every 40 min. How many cells are present after 120 min?",
+      "options": {
+        "A": "6 ×10^6 cells",
+        "B": "27 ×10^6 cells",
+        "C": "24 ×10^6 cells",
+        "D": "12 ×10^6 cells"
+      },
+      "answer": "C",
+      "error_by_choice": {
+        "A": "use exponential multiplication rather than adding once per period",
+        "B": "use a base of two for doubling",
+        "C": "correct",
+        "D": "recheck the number of doublings"
+      }
+    },
+    {
+      "id": "confirm-biology_doubling-06",
+      "split": "confirm",
+      "domain": "biology",
+      "template": "biology_doubling",
+      "question": "A culture starts with 10×10^6 cells and doubles every 30 min. How many cells are present after 150 min?",
+      "options": {
+        "A": "15 ×10^6 cells",
+        "B": "160 ×10^6 cells",
+        "C": "1.000e+05 ×10^6 cells",
+        "D": "320 ×10^6 cells"
+      },
+      "answer": "D",
+      "error_by_choice": {
+        "A": "use exponential multiplication rather than adding once per period",
+        "B": "recheck the number of doublings",
+        "C": "use a base of two for doubling",
+        "D": "correct"
+      }
+    },
+    {
+      "id": "confirm-biology_doubling-07",
+      "split": "confirm",
+      "domain": "biology",
+      "template": "biology_doubling",
+      "question": "A culture starts with 8×10^6 cells and doubles every 30 min. How many cells are present after 150 min?",
+      "options": {
+        "A": "3.277e+04 ×10^6 cells",
+        "B": "128 ×10^6 cells",
+        "C": "13 ×10^6 cells",
+        "D": "256 ×10^6 cells"
+      },
+      "answer": "D",
+      "error_by_choice": {
+        "A": "use a base of two for doubling",
+        "B": "recheck the number of doublings",
+        "C": "use exponential multiplication rather than adding once per period",
+        "D": "correct"
+      }
+    }
+  ]
+}
