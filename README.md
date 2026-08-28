@@ -104,6 +104,28 @@ Run `python verify_balanced_confirmation.py` to validate the public protocol,
 exactly balanced cases, output hashes, transition counts, and inferential
 statistics.
 
+## Same-family model-size replication: did not pass
+
+I then ran the unchanged public balanced-label protocol once on the locally
+cached Qwen3 0.6B. This is a model-size comparison inside the Qwen family, not
+an independent-architecture replication.
+
+| Condition | Correct | Accuracy | Paired change | 95% bootstrap CI | Exact McNemar p |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Direct | 32/72 | 44.4% | — | — | — |
+| Intrinsic audit | 35/72 | 48.6% | +4.2 points | 0.0 to +9.7 | 0.25 |
+| Verifier-gated | 33/72 | 45.8% | +1.4 points | 0.0 to +4.2 | 1.0 |
+
+Neither audit condition met the frozen replication rule: both lower confidence
+bounds touched zero and neither McNemar test was significant. The direct model
+also chose A on 41/72 cases despite exactly balanced correct labels. The 1.7B
+result therefore does not automatically scale down to Qwen3 0.6B under this
+pipeline. The result is a useful lower-capability boundary, not proof of a
+general scale law or evidence that the smaller model cannot solve science.
+
+Run `python verify_qwen_0_6b_balanced_replication.py` to verify the exact
+frozen artifact and non-replication statistics.
+
 ## What this does and does not show
 
 - It shows a statistically detectable paired improvement on this frozen

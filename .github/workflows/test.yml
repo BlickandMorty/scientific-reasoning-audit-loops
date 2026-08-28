@@ -19,3 +19,4 @@ jobs:
       - run: python generate_balanced_confirmation.py
       - run: git diff --exit-code data/science_cases_balanced_confirmation_v1.json data/science_cases_balanced_confirmation_manifest_v1.json
       - run: python verify_balanced_confirmation.py
+      - run: python verify_qwen_0_6b_balanced_replication.py
