@@ -1,12 +1,21 @@
 # Scientific Reasoning Audit Loops
 
+> **Project status:** AI-assisted exploratory experiment
+>
+> **AI assistance:** substantial
+> `████████░░` AI helped scaffold and revise implementation, analysis, and documentation around the experiment.
+>
+> **My role:** I chose the question, reviewed the experimental setup and results, ran or checked the workflow, and kept the failures and limits with the result. I can explain the high-level comparison between direct answers, self-audits, and verifier-gated repair. I am still learning the deeper model, statistics, and scientific-method details used here.
+>
+> **What this is not:** a claim that I am already a PhD researcher, a production ML engineer, or an expert in every library used by the experiment.
+
 ## What I wanted to know
 
 Can a small open-weight model improve its scientific problem solving by checking
 its own work, and does a narrow deterministic verifier help more than an
 unguided second look?
 
-I built this project to connect my three research stacks. The science is a set
+I framed this project to connect my three research stacks. The science is a set
 of chemistry, physics, and biology calculations. The AI work is a paired
 inference-time intervention on Qwen3 1.7B. The security idea is the same one I
 use in proof-carrying policy evaluation: do not trust a fluent answer when a
